@@ -11,8 +11,11 @@ import {
 import MySearchBar from "../components/MySearchBar";
 import MyTextInput from "../components/MyTextInput";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { useNavigation } from "@react-navigation/native";
+
 
 const Register = () => {
+  const navigate = useNavigation();
   return (
     //  <KeyboardAvoidingView style={styles.container} behavior="position">
     <View style={styles.container}>
@@ -38,7 +41,7 @@ const Register = () => {
 
       <View style={styles.horizontalcontainer}>
         <Text>Already have an account?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigate.navigate("login")}>
           <Text style={styles.logintext}>Log in</Text>
         </TouchableOpacity>
         </View>

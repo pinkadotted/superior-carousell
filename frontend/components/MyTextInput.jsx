@@ -12,7 +12,6 @@ const MyTextInput = ({ placeholder, isPassword = false }) => {
         onChangeText={(text) => setText(text)}
         label={placeholder}
         style={{
-          // borderRadius: 100,
           height: 50,
           width: 350,
           backgroundColor: "#eaeaea",
