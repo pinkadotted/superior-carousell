@@ -10,4 +10,7 @@ npm i react-native-paper
 
 npm i react-native-snap-carousel
 
-npx expo start --tunnel
+When phone and computer are not connected to the same WiFi network:
+`npx expo start --tunnel`
+
+npm install @react-navigation/bottom-tabs
