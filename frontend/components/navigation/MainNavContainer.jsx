@@ -40,8 +40,6 @@ const MainNavContainer = () => {
                   style={{ backgroundColor: 'transparent', alignItems: 'center' }}
                   size={50}
                   color="red"
-
-                  
             />
           );
         },

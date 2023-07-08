@@ -12,7 +12,7 @@ const MySearchBar = ({ placeholder }) => {
       onChangeText={onChangeSearch}
       value={searchQuery}
       mode='bar'
-      style={{ borderRadius: 10, height: 50 }}
+      style={{ borderRadius: 10, height: 50, minWidth: '70%'}}
           
     />
   );
