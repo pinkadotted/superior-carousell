@@ -30,7 +30,7 @@ const Login = () => {
           <MyTextInput placeholder="Set up a password" isPassword={true} />
         </View>
         <View>
-          <TouchableOpacity style={styles.createaccount}>
+          <TouchableOpacity style={styles.createaccount} onPress={() => navigate.navigate('main-nav')}>
             <Text style={styles.createaccounttext}>Log In</Text>
           </TouchableOpacity>
         </View>
