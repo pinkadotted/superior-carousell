@@ -82,7 +82,7 @@ const Home = ({ navigation }) => {
         </ScrollView>
         {/* End of scrollview section */}
 
-        <View style={{ alignItems: "flex-end", minHeight: '10%', maxHeight: '10%', }}>
+        <View style={{ alignItems: "flex-end", minHeight: '10%', maxHeight: '10%', position: "relative" }}>
           <MyBottomNav activeRoute="home-page"/>
         </View>
       </SafeAreaView>
