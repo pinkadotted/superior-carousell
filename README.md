@@ -14,3 +14,6 @@ When phone and computer are not connected to the same WiFi network:
 `npx expo start --tunnel`
 
 npm install @react-navigation/bottom-tabs
+
+library for GridView: 
+`npm install react-native-super-grid`
