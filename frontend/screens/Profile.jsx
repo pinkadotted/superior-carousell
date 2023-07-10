@@ -2,6 +2,7 @@ import { SafeAreaView, Platform, StatusBar, View, Text, StyleSheet, TouchableOpa
 import React from 'react';
 import { Avatar } from 'react-native-paper';
 import ListingsGrid from "../components/ListingsGrid";
+import MyBottomNav from '../components/navigation/MyBottomNav';
 
 const Profile = () => {
   let profiledetails = {
@@ -46,7 +47,11 @@ const Profile = () => {
             <ListingsGrid />
           </ScrollView>
         </View>
-    </SafeAreaView>
+        {/* Nav Bar */}
+        <View style={{ alignItems: "flex-end", minHeight: '10%', maxHeight: '10%'}}>
+          <MyBottomNav activeRoute="home-page"/>
+        </View>
+      </SafeAreaView>
   );
 };
 
@@ -56,25 +61,25 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: 2,
-    borderColor: "red",
+    // borderWidth: 2,
+    // borderColor: "red",
     justifyContent: "flex-start",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   settingsbutton: {
     flex: 1,
     flexDirection: "row",
-    borderWidth: 2,
-    borderColor: "yellow",
+    // borderWidth: 2,
+    // borderColor: "yellow",
     justifyContent: "flex-end",
     alignItems: "center",
-    minHeight: "5%",
-    maxHeight: "5%",
+    minHeight: "8%",
+    maxHeight: "8%",
     width: "95%",
   },
   profiledetails:{
-    borderWidth: 2,
-    borderColor: "teal",
+    // borderWidth: 2,
+    // borderColor: "teal",
     // alignItems: "center",
     minHeight: "20%",
     maxHeight: "20%",
@@ -84,8 +89,8 @@ const styles = StyleSheet.create({
   profilephoto: {
     flex: 1,
     flexDirection: "row",
-    borderWidth: 2,
-    borderColor: "grey",
+    // borderWidth: 2,
+    // borderColor: "grey",
     justifyContent: "center",
     alignItems: "center",
     maxHeight: 100,
@@ -109,38 +114,38 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "flex-start",
-    borderWidth: 2,
-    borderColor: "greenyellow",
+    // borderWidth: 2,
+    // borderColor: "greenyellow",
     maxWidth: "100%",
   },
   profiletext: {
     flexDirection: "row",
-    borderWidth: 2,
-    borderColor: "green",
+    // borderWidth: 2,
+    // borderColor: "green",
     maxWidth: "100%",
     fontSize: 15,
   },
   yourlistings: {
-    borderWidth: 2,
-    borderColor: "powderblue",
-    minHeight: "75%",
-    maxHeight: "75%",
-    minWidth: "95%",
-    maxWidth: "95%",
+    // borderWidth: 2,
+    // borderColor: "powderblue",
+    minHeight: "62%",
+    maxHeight: "62%",
+    minWidth: "100%",
+    maxWidth: "100%",
   },
   headertext: {
-    borderWidth: 2,
-    borderColor: "cyan",
+    // borderWidth: 2,
+    // borderColor: "cyan",
     fontWeight: "bold",
     fontSize: 30,
-    padding: "2%",
+    padding: "3%",
     maxWidth: "100%",
     justifyContent: "flex-start"
   },
   scrollview:{
     flex: 1,
-    borderWidth:2,
-    borderColor: "blue",
+    // borderWidth:2,
+    // borderColor: "blue",
     maxWidth: "100%",
   },
 });
