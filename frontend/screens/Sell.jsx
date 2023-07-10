@@ -16,6 +16,7 @@ import AddImageCard from "../components/AddImageCard";
 import { Avatar } from "react-native-paper";
 import MyTextInput from "../components/MyTextInput";
 import MyRadioButton from "../components/MyRadioButton";
+import MyDropdown from "../components/MyDropdown";
 
 const Sell = () => {
   return (
@@ -81,10 +82,14 @@ const Sell = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+              // borderWidth: 3,
+              // borderColor: 'magenta'
             }}
           >
             <Text style={{ fontSize: 40, fontWeight: "bold" }}>Category</Text>
-            <Text>DROPDOWN</Text>
+            <MyDropdown />
+
+
           </View>
 
           {/* Title section */}
@@ -214,10 +219,8 @@ const Sell = () => {
               alignItems: "center",
               maxWidth: "100%",
               minWidth: "100%",
-              minHeight: "20%",
-              maxHeight: "20%",
-              // paddingBottom: 20,
-              // paddingTop: 50,
+              minHeight: "15%",
+              maxHeight: "15%",
               // borderWidth: 3,
               // borderColor: "red",
             }}
@@ -269,8 +272,8 @@ const Sell = () => {
                 backgroundColor: "pink",
                 minWidth: "90%",
                 maxWidth: "90%",
-                minHeight: "25%",
-                maxHeight: "25%",
+                minHeight: "30%",
+                maxHeight: "30%",
                 borderRadius: 10,
                 justifyContent: 'center',
                 alignItems: 'center'
