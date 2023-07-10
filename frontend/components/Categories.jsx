@@ -50,25 +50,23 @@ const Categories = () => {
   return (
     <View style={styles.flexcontainer}>
       {/* <View style={{ ...styles.flexcontainer, maxHeight: '30%' }}> */}
-        <Text
+        {/* <Text
           style={{
             fontSize: 30,
             fontWeight: "bold",
             justifyContent: "center",
             alignItems: "center",
-            borderWidth: 2,
-            borderColor: "red",
           }}
         >
           Categories
-        </Text>
+        </Text> */}
       {/* </View> */}
 
       {/* Actual items */}
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={{ borderWidth: 2, borderColor: "red", maxHeight: '30%' }}
+        style={{backgroundColor: 'white'}}
         contentContainerStyle={{alignItems: 'center'}}
       >
         {/* <View style={styles.categoriescontainer}> */}
@@ -96,7 +94,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     borderWidth: 2,
-    borderColor: "red",
+    borderColor: "blue",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   headertext: {
@@ -106,7 +104,7 @@ const styles = StyleSheet.create({
   categoriescontainer: {
     flexDirection: "row",
     borderWidth: 5,
-    borderColor: "red",
+    borderColor: "blue",
     minHeight: "10%",
     maxHeight: '20%',
     minWidth: "100%",
@@ -115,11 +113,13 @@ const styles = StyleSheet.create({
   flexcontainer: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "flex-start",
-    borderWidth: 2,
-    borderColor: "green",
+    justifyContent: "center",
+    // borderWidth: 2,
+    // borderColor: "green",
     maxWidth: '100%',
     minWidth: '100%',
+    // maxHeight: '100%',
+    // minHeight: '100%',
   },
   categorybutton: {
     borderRadius: 20,

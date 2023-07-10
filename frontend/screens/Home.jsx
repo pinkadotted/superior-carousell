@@ -5,46 +5,77 @@ import {
   Platform,
   SafeAreaView,
   StatusBar,
+  ScrollView,
 } from "react-native";
 import React from "react";
 import MyBottomNav from "../components/navigation/MyBottomNav";
-import MainNavContainer from "../components/navigation/MainNavContainer";
+// import MainNavContainer from "../components/navigation/MainNavContainer";
 import Header from "../components/Header";
 import Categories from "../components/Categories";
-
-
+import ListingCard from "../components/ListingCard";
+import ListingsGrid from "../components/ListingsGrid";
 
 const Home = ({ navigation }) => {
   return (
     <>
       {/* Header section */}
       <SafeAreaView style={styles.container}>
-        <Header />
+          <Header />
 
-        {/* Header Text */}
-        <View>
-          <Text
-            style={{
-              fontSize: 40,
-              fontWeight: "bold",
-            }}
-          >
-            Welcome John!
-          </Text>
-          <Text
-            style={{
-              fontSize: 30,
-            }}
-          >
-            What are you looking for today?
-          </Text>
-        </View>
+        {/* Start of scrollview section */}
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          stickyHeaderIndices={[2]}
+        >
+          {/* Header Text */}
+          <View style={{ justifyContent: "center", alignItems: "center" }}>
+            <Text
+              style={{
+                fontSize: 40,
+                fontWeight: "bold",
+              }}
+            >
+              Welcome John!
+            </Text>
+            <Text
+              style={{
+                fontSize: 30,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              What are you looking for today?
+            </Text>
+          </View>
 
-        {/* Categories */}
-        <Categories />
-        
-        {/* Listings */}
-        
+          {/* Categories heading section*/}
+          <View style={{ justifyContent: "center", alignItems: "center" }}>
+            <Text
+              style={{
+                fontSize: 30,
+                fontWeight: "bold",
+                justifyContent: "center",
+                alignItems: "center",
+                // borderRadius: 2,
+                // borderColor: 'red'
+              }}
+            >
+              Categories
+            </Text>
+          </View>
+
+          {/* Categories icons section*/}
+          <Categories style={{ position: "sticky" }} />
+
+          {/* Listings */}
+          <View>
+            <ListingsGrid />
+          </View>
+        </ScrollView>
+        {/* End of scrollview section */}
+
+        {/* <MyBottomNav /> */}
+        <Text> Hello</Text>
       </SafeAreaView>
     </>
   );
@@ -68,13 +99,13 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "green",
     minHeight: "40%",
-    minWidth: '90%'
+    minWidth: "90%",
   },
   flexcontainer: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-  }
+  },
 });
 
 export default Home;
