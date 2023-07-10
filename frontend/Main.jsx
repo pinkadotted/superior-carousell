@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import NewLanding from "./screens/NewLanding";
 import Register from "./screens/Register";
 import Login from "./screens/Login";
+import Home from "./screens/Home";
+import MainNavContainer from "./components/navigation/MainNavContainer";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +19,8 @@ const Main = () => {
           <Stack.Screen name="new-landing" component={NewLanding} />
           <Stack.Screen name="email-register" component={Register} />
           <Stack.Screen name="login" component={Login} />
+          <Stack.Screen name="home-page" component={Home} />
+          <Stack.Screen name="main-nav" component={MainNavContainer} />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>

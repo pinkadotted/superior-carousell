@@ -21,6 +21,25 @@ const Login = () => {
       //  <KeyboardAvoidingView style={styles.container} behavior="position">
       <View style={styles.container}>
         <Text style={styles.headertext}>Log In</Text>
+        <View style={styles.verticalcontainer}>
+          <Text style={styles.labeltext}>Email</Text>
+          <MyTextInput placeholder="Enter your email" />
+        </View>
+        <View style={styles.verticalcontainer}>
+          <Text style={styles.labeltext}>Password</Text>
+          <MyTextInput placeholder="Set up a password" isPassword={true} />
+        </View>
+        <View>
+          <TouchableOpacity style={styles.createaccount} onPress={() => navigate.navigate('main-nav')}>
+            <Text style={styles.createaccounttext}>Log In</Text>
+          </TouchableOpacity>
+        </View>
+  
+        <View style={styles.horizontalcontainer}>
+          <Text>Don't have an account?</Text>
+          <TouchableOpacity onPress={() => navigate.navigate('email-register')}>
+            <Text style={styles.logintext}>Register</Text>
+          </TouchableOpacity>
         <View style={styles.formcontainer}>
           <View style={styles.verticalcontainer}>
             <Text style={styles.labeltext}>Email</Text>
