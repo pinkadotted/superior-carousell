@@ -27,7 +27,7 @@ const Register = () => {
       <View style={styles.verticalcontainer}>
         <Text style={styles.labeltext}>Password</Text>
         <MyTextInput placeholder="Set up a password" isPassword={true} />
-        <Text style={{ ...styles.labeltext, fontWeight: 'none' }}>Include at least 6 characters</Text>
+        <Text style={{ ...styles.labeltext, fontWeight: 'normal' }}>Include at least 6 characters</Text>
       </View>
       <View style={styles.verticalcontainer}>
         <Text style={styles.labeltext}>Re-enter Password</Text>

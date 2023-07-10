@@ -41,8 +41,10 @@ const Home = ({ navigation }) => {
         </View>
 
         {/* Categories */}
-
         <Categories />
+        
+        {/* Listings */}
+        
       </SafeAreaView>
     </>
   );
