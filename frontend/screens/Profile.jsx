@@ -1,6 +1,15 @@
-import { SafeAreaView, Platform, StatusBar, View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-import React from 'react';
-import { Avatar } from 'react-native-paper';
+import {
+  SafeAreaView,
+  Platform,
+  StatusBar,
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import React from "react";
+import { Avatar } from "react-native-paper";
 import ListingsGrid from "../components/ListingsGrid";
 import MyBottomNav from '../components/navigation/MyBottomNav';
 
@@ -8,31 +17,43 @@ const Profile = () => {
   let profiledetails = {
     name: "John",
     balance: 20,
-  }
+  };
 
   return (
     <SafeAreaView style={styles.container}>
       {/* Settings bar */}
       <TouchableOpacity style={styles.settingsbutton}>
-        <Avatar.Icon size={40} color="red" icon="cog-outline" style={{ backgroundColor: 'transparent', alignItems: 'center' }}/>
+        <Avatar.Icon
+          size={40}
+          color="red"
+          icon="cog-outline"
+          style={{ backgroundColor: "transparent", alignItems: "center" }}
+        />
       </TouchableOpacity>
       {/* Profile Details */}
       <View style={styles.profiledetails}>
         {/* Profile Photo */}
         <View style={styles.profilephoto}>
-          <Avatar.Image size={100} source={require('../assets/images/penguin.jpg')} />
+          <Avatar.Image
+            size={100}
+            source={require("../assets/images/penguin.jpg")}
+          />
         </View>
         {/* Profile Text */}
         <View style={styles.profiletextcontainer}>
           {/* Name */}
           <View style={styles.profiletextgroup}>
             <Text style={styles.profiletext}>Name: </Text>
-            <Text style={{...styles.profiletext, fontWeight:"bold"}}>{profiledetails.name}</Text>
+            <Text style={{ ...styles.profiletext, fontWeight: "bold" }}>
+              {profiledetails.name}
+            </Text>
           </View>
           {/* Balance */}
           <View style={styles.profiletextgroup}>
             <Text style={styles.profiletext}>Your Balance: </Text>
-            <Text style={{...styles.profiletext, fontWeight:"bold"}}>${profiledetails.balance}</Text>
+            <Text style={{ ...styles.profiletext, fontWeight: "bold" }}>
+              ${profiledetails.balance}
+            </Text>
           </View>
         </View>
         </View>
@@ -49,7 +70,7 @@ const Profile = () => {
         </View>
         {/* Nav Bar */}
         <View style={{ alignItems: "flex-end", minHeight: '10%', maxHeight: '10%'}}>
-          <MyBottomNav activeRoute="home-page"/>
+          <MyBottomNav activeRoute="profile-page"/>
         </View>
       </SafeAreaView>
   );
@@ -80,7 +101,6 @@ const styles = StyleSheet.create({
   profiledetails:{
     // borderWidth: 2,
     // borderColor: "teal",
-    // alignItems: "center",
     minHeight: "20%",
     maxHeight: "20%",
     minWidth: "95%",
@@ -140,14 +160,15 @@ const styles = StyleSheet.create({
     fontSize: 30,
     padding: "3%",
     maxWidth: "100%",
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
   },
-  scrollview:{
+  scrollview: {
     flex: 1,
-    // borderWidth:2,
+    // borderWidth: 2,
     // borderColor: "blue",
     maxWidth: "100%",
+    minWidth: '100%'
   },
 });
 
-export default Profile
+export default Profile;
