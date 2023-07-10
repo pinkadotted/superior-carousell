@@ -18,7 +18,8 @@
     "react-native": "0.71.8",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-paper": "^5.9.1",
-    "react-native-snap-carousel": "^3.9.1"
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-super-grid": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

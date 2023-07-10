@@ -8,6 +8,7 @@ import Register from "./screens/Register";
 import Login from "./screens/Login";
 import Home from "./screens/Home";
 import MainNavContainer from "./components/navigation/MainNavContainer";
+import Sell from "./screens/Sell";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ const Main = () => {
           <Stack.Screen name="email-register" component={Register} />
           <Stack.Screen name="login" component={Login} />
           <Stack.Screen name="home-page" component={Home} />
+          <Stack.Screen name="sell-page" component={Sell} />
           <Stack.Screen name="main-nav" component={MainNavContainer} />
         </Stack.Group>
       </Stack.Navigator>
