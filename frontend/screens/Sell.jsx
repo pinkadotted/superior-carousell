@@ -23,14 +23,17 @@ const Sell = () => {
         {/* Back button */}
 
         <ScrollView>
+
+          {/* Photos section */}
           <View
             style={{
               flex: 1,
               flexDirection: "column",
-              justifyContent: 'center',
-              alignItems: 'center',
-              minWidth: "95%",
-              maxWidth: "95%",
+              justifyContent: "center",
+              alignItems: "center",
+
+              minHeight: '50%',
+              maxHeight: '50%',
               borderWidth: 2,
               borderColor: "cyan",
             }}
@@ -42,23 +45,48 @@ const Sell = () => {
               style={{
                 flex: 1,
                 flexDirection: "row",
-                justifyContent: "space-between",
+                justifyContent: "space-around",
                 // justifyContent: 'center',
-                alignItems: 'center',
-                minWidth: '100%',
-                maxWidth: '100%',
-                borderWidth: 2,
-                borderColor: "blue",
+                alignItems: "center",
+                minWidth: "100%",
+                maxWidth: "100%",
+                // borderWidth: 2,
+                // borderColor: "blue",
               }}
             >
-              <AddImageCard />
-              <AddImageCard />
-              <TouchableOpacity>
-                <Avatar.Icon icon="folder-image" size={50} />
-              </TouchableOpacity>
+              <View>
+                <AddImageCard />
+              </View>
+              <View>
+                <AddImageCard />
+              </View>
+              <View>
+                <TouchableOpacity>
+                  <Avatar.Icon icon="camera-plus-outline" size={50} style={{backgroundColor: 'transparent'}} color="pink"/>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
+
+          {/* Category section */}
+          <View>
+              <Text>Category</Text>
+              
+          </View>
+
+
         </ScrollView>
+
+        <View
+          style={{
+            alignItems: "flex-end",
+            minHeight: "10%",
+            maxHeight: "10%",
+            position: "relative",
+          }}
+        >
+          <MyBottomNav activeRoute="sell-page" />
+        </View>
       </SafeAreaView>
     </>
   );

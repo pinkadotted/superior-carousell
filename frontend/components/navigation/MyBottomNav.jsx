@@ -35,6 +35,8 @@ function MyBottomNav({activeRoute = "home-page"}) {
         maxWidth: "100%",
         // borderWidth: 2,
         // borderColor: "cyan",
+              borderTopColor: 'grey',
+        borderTopWidth: 2,
         justifyContent: "space-around",
         alignItems: "center",
         position: "relative",
