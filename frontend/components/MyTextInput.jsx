@@ -13,9 +13,10 @@ const MyTextInput = ({ placeholder, isPassword = false }) => {
         label={placeholder}
         style={{
           height: 50,
-          width: 350,
+          minWidth: "100%",
           backgroundColor: "#eaeaea",
           borderWidth: 0,
+          lineHeight: 30
         }}
         right={isPassword ? <TextInput.Icon icon="eye" /> : null}
         secureTextEntry={isPassword ? true : false}
