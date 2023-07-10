@@ -1,6 +1,7 @@
 import { SafeAreaView, Platform, StatusBar, View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import React from 'react';
 import { Avatar } from 'react-native-paper';
+import ListingsGrid from "../components/ListingsGrid";
 
 const Profile = () => {
   let profiledetails = {
@@ -15,9 +16,9 @@ const Profile = () => {
         <Avatar.Icon size={40} color="red" icon="cog-outline" style={{ backgroundColor: 'transparent', alignItems: 'center' }}/>
       </TouchableOpacity>
       {/* Profile Details */}
-      <View>
+      <View style={styles.profiledetails}>
         {/* Profile Photo */}
-        <View style={styles.horizontalcontainer}>
+        <View style={styles.profilephoto}>
           <Avatar.Image size={100} source={require('../assets/images/penguin.jpg')} />
         </View>
         {/* Profile Text */}
@@ -33,18 +34,18 @@ const Profile = () => {
             <Text style={{...styles.profiletext, fontWeight:"bold"}}>${profiledetails.balance}</Text>
           </View>
         </View>
+        </View>
         {/* Your Listings */}
-        <View>
+        <View style={styles.yourlistings}>
           {/* Header */}
           <View>
             <Text style={styles.headertext}>Your Listings</Text>
           </View>
           {/* ScrollView of Listings */}
-          {/* <ScrollView>
-
-          </ScrollView> */}
+          <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollview}>
+            <ListingsGrid />
+          </ScrollView>
         </View>
-      </View>
     </SafeAreaView>
   );
 };
@@ -60,16 +61,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
-  horizontalcontainer: {
-    flex: 1,
-    flexDirection: "row",
-    borderWidth: 2,
-    borderColor: "grey",
-    justifyContent: "center",
-    alignItems: "center",
-    maxHeight: 100,
-    maxWidth: "90%",
-  },
   settingsbutton: {
     flex: 1,
     flexDirection: "row",
@@ -77,8 +68,28 @@ const styles = StyleSheet.create({
     borderColor: "yellow",
     justifyContent: "flex-end",
     alignItems: "center",
-    maxHeight: 40,
-    width: "90%",
+    minHeight: "5%",
+    maxHeight: "5%",
+    width: "95%",
+  },
+  profiledetails:{
+    borderWidth: 2,
+    borderColor: "teal",
+    // alignItems: "center",
+    minHeight: "20%",
+    maxHeight: "20%",
+    minWidth: "95%",
+    maxWidth: "95%",
+  },
+  profilephoto: {
+    flex: 1,
+    flexDirection: "row",
+    borderWidth: 2,
+    borderColor: "grey",
+    justifyContent: "center",
+    alignItems: "center",
+    maxHeight: 100,
+    maxWidth: "100%",
   },
   profiletextcontainer: {
     flex: 1,
@@ -88,8 +99,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "transparent",
     // borderColor: "blue",
-    minWidth: "90%",
-    maxWidth: "90%",
+    minWidth: "100%",
+    maxWidth: "100%",
     minHeight: 40,
     maxHeight: "20%",
     borderBottomColor: "grey",
@@ -109,9 +120,28 @@ const styles = StyleSheet.create({
     maxWidth: "100%",
     fontSize: 15,
   },
+  yourlistings: {
+    borderWidth: 2,
+    borderColor: "powderblue",
+    minHeight: "75%",
+    maxHeight: "75%",
+    minWidth: "95%",
+    maxWidth: "95%",
+  },
   headertext: {
+    borderWidth: 2,
+    borderColor: "cyan",
     fontWeight: "bold",
     fontSize: 30,
+    padding: "2%",
+    maxWidth: "100%",
+    justifyContent: "flex-start"
+  },
+  scrollview:{
+    flex: 1,
+    borderWidth:2,
+    borderColor: "blue",
+    maxWidth: "100%",
   },
 });
 

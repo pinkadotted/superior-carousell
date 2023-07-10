@@ -33,7 +33,7 @@ const Login = () => {
         </View>
         <View style={styles.bottomcontainer}>
           <View>
-            <TouchableOpacity style={styles.createaccount}  onPress={() => navigate.navigate('main-nav')}>
+            <TouchableOpacity style={styles.createaccount}  onPress={() => navigate.navigate('profile-page')}>
               <Text style={styles.createaccounttext}>Log In</Text>
             </TouchableOpacity>
           </View>

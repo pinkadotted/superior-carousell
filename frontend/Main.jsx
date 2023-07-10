@@ -7,8 +7,10 @@ import NewLanding from "./screens/NewLanding";
 import Register from "./screens/Register";
 import Login from "./screens/Login";
 import Home from "./screens/Home";
+import Profile from "./screens/Profile";
 import MainNavContainer from "./components/navigation/MainNavContainer";
 import Sell from "./screens/Sell";
+import Settings from "./screens/Settings";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +24,8 @@ const Main = () => {
           <Stack.Screen name="login" component={Login} />
           <Stack.Screen name="home-page" component={Home} />
           <Stack.Screen name="sell-page" component={Sell} />
+          <Stack.Screen name="profile-page" component={Profile} />
+          <Stack.Screen name="settings" component={Settings} />
           <Stack.Screen name="main-nav" component={MainNavContainer} />
         </Stack.Group>
       </Stack.Navigator>
