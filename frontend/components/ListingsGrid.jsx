@@ -6,21 +6,18 @@ import ListingCard from "./ListingCard";
 const ListingsGrid = () => {
   return (
     // <View>
-      <ScrollView
-        style={{ borderRadius: 2, borderColor: "blue" }}
-        showsVerticalScrollIndicator={false}
-      >
-        <View style={{ justifyContent: "flex-start", alignItems: "center" }}>
-          <Text style={{ fontSize: 30, fontWeight: "bold", paddingTop: 20 }}>
-            Recent Listings
-          </Text>
-        </View>
-        <SimpleGrid
-          itemDimension={130}
-          data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-          renderItem={({ item }) => <ListingCard />}
-        />
-      </ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={{ justifyContent: "flex-start", alignItems: "center" }}>
+        <Text style={{ fontSize: 30, fontWeight: "bold", paddingTop: 20 }}>
+          Recent Listings
+        </Text>
+      </View>
+      <SimpleGrid
+        itemDimension={130}
+        data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+        renderItem={({ item }) => <ListingCard />}
+      />
+    </ScrollView>
     // </View>
   );
 };

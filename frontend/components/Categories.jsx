@@ -66,7 +66,7 @@ const Categories = () => {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={{backgroundColor: 'white'}}
+        style={{ backgroundColor: 'white' }}
         contentContainerStyle={{alignItems: 'center'}}
       >
         {/* <View style={styles.categoriescontainer}> */}

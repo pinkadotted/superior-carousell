@@ -6,21 +6,23 @@ import {
   SafeAreaView,
   StatusBar,
   ScrollView,
+  Dimensions,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import MyBottomNav from "../components/navigation/MyBottomNav";
-// import MainNavContainer from "../components/navigation/MainNavContainer";
+import MainNavContainer from "../components/navigation/MainNavContainer";
 import Header from "../components/Header";
 import Categories from "../components/Categories";
-import ListingCard from "../components/ListingCard";
 import ListingsGrid from "../components/ListingsGrid";
 
 const Home = ({ navigation }) => {
+  
+
   return (
     <>
       {/* Header section */}
       <SafeAreaView style={styles.container}>
-          <Header />
+        <Header />
 
         {/* Start of scrollview section */}
         <ScrollView
@@ -74,8 +76,9 @@ const Home = ({ navigation }) => {
         </ScrollView>
         {/* End of scrollview section */}
 
-        {/* <MyBottomNav /> */}
-        <Text> Hello</Text>
+        <View style={{ alignItems: "flex-end", minHeight: '10%', maxHeight: '10%', position: 'relative' }}>
+          <MyBottomNav activeRoute="home-page"/>
+        </View>
       </SafeAreaView>
     </>
   );
@@ -87,9 +90,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "space-between",
-    borderWidth: 2,
-    borderColor: "red",
+    // borderWidth: 4,
+    // borderColor: "red",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    minHeight: Dimensions.get('window').height
   },
   headertext: {
     fontSize: 40,

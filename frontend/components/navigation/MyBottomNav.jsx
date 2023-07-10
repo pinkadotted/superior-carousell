@@ -3,19 +3,68 @@ import { createMaterialBottomTabNavigator } from "react-native-paper/react-navig
 import Home from "../../screens/Home";
 import Sell from "../../screens/Sell";
 import Profile from "../../screens/Profile";
+import { View, Text, TouchableOpacity } from "react-native";
+import { Avatar } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 
-const Tab = createMaterialBottomTabNavigator();
+function MyBottomNav({activeRoute = "home-page"}) {
+  const navigate = useNavigation();
 
-function MyBottomNav() {
-  const HomeName = "Home";
-  const ProfileName = "Profile";
-  const SellName = "Sell";
+  const navigationHandler = (key) => {
+    switch (key) {
+      case 0:
+        navigate.navigate("home-page");
+        break;
+      case 1:
+        navigate.navigate("sell-page");
+        break;
+      case 2:
+        navigate.navigate("profile-page");
+        break;
+      default:
+        navigate.navigate("home-page");
+        break;
+    }
+  };
   return (
-    <Tab.Navigator>
-      <Tab.Screen name={HomeName} component={Home} />
-      <Tab.Screen name={SellName} component={Sell} />
-      <Tab.Screen name={ProfileName} component={Profile} />
-    </Tab.Navigator>
+    <View
+      style={{
+        flex: 1,
+        flexDirection: "row",
+        minWidth: "100%",
+        maxWidth: "100%",
+        // borderWidth: 2,
+        // borderColor: "cyan",
+        justifyContent: "space-around",
+        alignItems: "center",
+        position: "relative",
+      }}
+    >
+      <TouchableOpacity onPress={() => navigationHandler(0)}>
+        <Avatar.Icon
+          icon={activeRoute === "home-page" ? "shopping" : "shopping-outline"}
+          style={{ backgroundColor: "transparent", alignItems: "center" }}
+          size={70}
+          color="red"
+        />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigationHandler(1)}>
+        <Avatar.Icon
+          icon={activeRoute === "sell-page" ? "plus-box" : "plus-box-outline"}
+          style={{ backgroundColor: "transparent", alignItems: "center" }}
+          size={70}
+          color="red"
+        />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigationHandler(2)}>
+        <Avatar.Icon
+          icon={activeRoute === "profile-page" ? "account-circle" : "account-circle-outline"}
+          style={{ backgroundColor: "transparent", alignItems: "center" }}
+          size={70}
+          color="red"
+        />
+      </TouchableOpacity>
+    </View>
   );
 }
 export default MyBottomNav;
