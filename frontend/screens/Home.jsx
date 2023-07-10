@@ -22,12 +22,18 @@ const Home = ({ navigation }) => {
     <>
       {/* Header section */}
       <SafeAreaView style={styles.container}>
-        <Header />
-
+        <View style={{ flex:1, maxHeight: "10%", minHeight:"10%" }}>
+         <Header />
+        </View>
         {/* Start of scrollview section */}
         <ScrollView
           showsVerticalScrollIndicator={false}
           stickyHeaderIndices={[2]}
+          style={{
+            flex: 1,
+            maxHeight: "80%",
+            minHeight: "80%",
+          }}
         >
           {/* Header Text */}
           <View style={{ justifyContent: "center", alignItems: "center" }}>
@@ -76,7 +82,7 @@ const Home = ({ navigation }) => {
         </ScrollView>
         {/* End of scrollview section */}
 
-        <View style={{ alignItems: "flex-end", minHeight: '10%', maxHeight: '10%', position: 'relative' }}>
+        <View style={{ alignItems: "flex-end", minHeight: '10%', maxHeight: '10%', position: "relative" }}>
           <MyBottomNav activeRoute="home-page"/>
         </View>
       </SafeAreaView>

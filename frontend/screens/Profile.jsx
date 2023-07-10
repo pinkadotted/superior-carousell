@@ -11,7 +11,7 @@ import {
 import React from "react";
 import { Avatar } from "react-native-paper";
 import ListingsGrid from "../components/ListingsGrid";
-import MyBottomNav from "../components/navigation/MyBottomNav";
+import MyBottomNav from '../components/navigation/MyBottomNav';
 
 const Profile = () => {
   let profiledetails = {
@@ -56,33 +56,23 @@ const Profile = () => {
             </Text>
           </View>
         </View>
-      </View>
-      {/* Your Listings */}
-      <View style={styles.yourlistings}>
-        {/* Header */}
-        <View>
-          <Text style={styles.headertext}>Your Listings</Text>
         </View>
-        {/* ScrollView of Listings */}
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          style={styles.scrollview}
-        >
-          <ListingsGrid />
-        </ScrollView>
-      </View>
-
-      <View
-        style={{
-          alignItems: "flex-end",
-          minHeight: "10%",
-          maxHeight: "10%",
-          position: "relative",
-        }}
-      >
-        <MyBottomNav activeRoute="profile-page" />
-      </View>
-    </SafeAreaView>
+        {/* Your Listings */}
+        <View style={styles.yourlistings}>
+          {/* Header */}
+          <View>
+            <Text style={styles.headertext}>Your Listings</Text>
+          </View>
+          {/* ScrollView of Listings */}
+          <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollview}>
+            <ListingsGrid />
+          </ScrollView>
+        </View>
+        {/* Nav Bar */}
+        <View style={{ alignItems: "flex-end", minHeight: '10%', maxHeight: '10%'}}>
+          <MyBottomNav activeRoute="profile-page"/>
+        </View>
+      </SafeAreaView>
   );
 };
 
@@ -104,14 +94,13 @@ const styles = StyleSheet.create({
     // borderColor: "yellow",
     justifyContent: "flex-end",
     alignItems: "center",
-    minHeight: "5%",
-    maxHeight: "5%",
+    minHeight: "8%",
+    maxHeight: "8%",
     width: "95%",
   },
-  profiledetails: {
+  profiledetails:{
     // borderWidth: 2,
     // borderColor: "teal",
-    // alignItems: "center",
     minHeight: "20%",
     maxHeight: "20%",
     minWidth: "95%",
@@ -159,8 +148,8 @@ const styles = StyleSheet.create({
   yourlistings: {
     // borderWidth: 2,
     // borderColor: "powderblue",
-    minHeight: "65%",
-    maxHeight: "65%",
+    minHeight: "62%",
+    maxHeight: "62%",
     minWidth: "100%",
     maxWidth: "100%",
   },
@@ -169,7 +158,7 @@ const styles = StyleSheet.create({
     // borderColor: "cyan",
     fontWeight: "bold",
     fontSize: 30,
-    padding: "2%",
+    padding: "3%",
     maxWidth: "100%",
     justifyContent: "flex-start",
   },
