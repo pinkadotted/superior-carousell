@@ -65,8 +65,8 @@ const Login = () => {
           </View>
         </View>
       </View>
-
-        // </KeyboardAvoidingView>
+    </View>
+      // </KeyboardAvoidingView>
     );
   };
   
