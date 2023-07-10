@@ -20,3 +20,6 @@ library for GridView:
 
 Bottom navigation bar:
 `npm install @react-navigation/material-bottom-tabs react-native-paper`
+
+dropdown library (used for categories dropdown in Listing page):
+`npm install react-native-element-dropdown --save`
