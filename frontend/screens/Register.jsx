@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   TouchableHighlight,
   View,
+  ScrollView,
   Image,
   Dimensions,
   KeyboardAvoidingView,
@@ -20,19 +21,21 @@ const Register = () => {
     //  <KeyboardAvoidingView style={styles.container} behavior="position">
     <View style={styles.container}>
       <Text style={styles.headertext}>Create account</Text>
-      <View style={styles.verticalcontainer}>
-        <Text style={styles.labeltext}>Email</Text>
-        <MyTextInput placeholder="Enter your email" />
-      </View>
-      <View style={styles.verticalcontainer}>
-        <Text style={styles.labeltext}>Password</Text>
-        <MyTextInput placeholder="Set up a password" isPassword={true} />
-        <Text style={{ ...styles.labeltext, fontWeight: 'none' }}>Include at least 6 characters</Text>
-      </View>
-      <View style={styles.verticalcontainer}>
-        <Text style={styles.labeltext}>Re-enter Password</Text>
-        <MyTextInput placeholder="" isPassword={true} />
-      </View>
+      <ScrollView style={styles.formcontainerouter} contentContainerStyle={styles.formcontainerinner} showsVerticalScrollIndicator={false}>
+        <View style={styles.verticalcontainer}>
+          <Text style={styles.labeltext}>Email</Text>
+          <MyTextInput placeholder="Enter your email" />
+        </View>
+        <View style={styles.verticalcontainer}>
+          <Text style={styles.labeltext}>Password</Text>
+          <MyTextInput placeholder="Set up a password" isPassword={true} />
+          <Text style={{ ...styles.labeltext, fontWeight: 'none' }}>Include at least 6 characters</Text>
+        </View>
+        <View style={styles.verticalcontainer}>
+          <Text style={styles.labeltext}>Re-enter Password</Text>
+          <MyTextInput placeholder="" isPassword={true} />
+        </View>
+      </ScrollView>
       <View>
         <TouchableOpacity style={styles.createaccount}>
           <Text style={styles.createaccounttext}>Create Account</Text>
@@ -40,12 +43,12 @@ const Register = () => {
       </View>
 
       <View style={styles.horizontalcontainer}>
-        <Text>Already have an account?</Text>
+        <Text>Already have an account? </Text>
         <TouchableOpacity onPress={() => navigate.navigate("login")}>
           <Text style={styles.logintext}>Log in</Text>
         </TouchableOpacity>
-        </View>
-        </View>
+      </View>
+    </View>
       // </KeyboardAvoidingView>
   );
 };
@@ -65,7 +68,8 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     borderWidth: 2,
     borderColor: "grey",
-    width: 350,
+    maxWidth: "100%",
+    minWidth: "100%",
     marginTop: 10,
     fontWeight: 'bold'
   },
@@ -76,7 +80,7 @@ const styles = StyleSheet.create({
   createaccount: {
     minWidth: "90%",
     height: "10%",
-    minHeight: "10%",
+    minHeight: 50,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#06aa6b",
@@ -105,8 +109,19 @@ const styles = StyleSheet.create({
     borderColor: "green",
     justifyContent: "center",
     alignItems: "center",
-    maxHeight: "15%",
+    minHeight: "30%",
     maxWidth: "90%",
+  },
+  formcontainerouter:{
+    flex: 1,
+    borderWidth:2,
+    borderColor: "blue",
+    maxHeight: "60%",
+    maxWidth: "100%",
+  },
+  formcontainerinner:{
+    justifyContent: "center",
+    alignItems: "center",
   },
   logintext: {
     color: "#06aa6b",
