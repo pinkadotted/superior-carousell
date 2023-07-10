@@ -17,3 +17,6 @@ npm install @react-navigation/bottom-tabs
 
 library for GridView: 
 `npm install react-native-super-grid`
+
+Bottom navigation bar:
+`npm install @react-navigation/material-bottom-tabs react-native-paper`
