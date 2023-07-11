@@ -1,33 +1,46 @@
+import { useNavigation } from "@react-navigation/native";
 import * as React from "react";
 import { View, StyleSheet } from "react-native";
 import { Avatar, Button, Card, Text } from "react-native-paper";
 
 const LeftContent = (props) => <Avatar.Icon {...props} icon="folder" />;
 
-const ListingCard = () => (
-  <Card style={styles.cardcontainer}>
-    <Card.Cover
-      source={{ uri: "https://picsum.photos/700" }}
-      style={styles.imgcontainer}
-    />
-    <Card.Content style={styles.textcontainer}>
-      <Text variant="titleLarge" style={{justifyContent: 'center', paddingTop: '10%',fontSize: 20, borderColor: 'purple', borderRadius: 2}}>SUTD T-shirt</Text>
-      <View style={styles.bottomcontainer}>
-        <Text style={{fontSize: 30}}>$10</Text>
-        <Avatar.Icon icon="tshirt-crew" size={40} />
-      </View>
-    </Card.Content>
-  </Card>
-);
+const ListingCard = ({ id, name, price, category, img }) => {
+
+  const navigate = useNavigation();
+
+  return (
+    <Card style={styles.cardcontainer} onPress={() => navigate.navigate('product-details')}>
+      <Card.Cover source={{ uri: img  }} style={styles.imgcontainer} />
+      <Card.Content style={styles.textcontainer}>
+        <Text
+          variant="titleLarge"
+          style={{
+            justifyContent: "center",
+            paddingTop: "10%",
+            fontSize: 20,
+            borderColor: "purple",
+            borderRadius: 2,
+          }}
+        >
+          {name}
+        </Text>
+        <View style={styles.bottomcontainer}>
+          <Text style={{ fontSize: 30 }}>{price}</Text>
+          <Avatar.Icon icon="tshirt-crew" size={40} />
+        </View>
+      </Card.Content>
+    </Card>
+  );
+};
 
 const styles = StyleSheet.create({
   cardcontainer: {
     minWidth: "60%",
-    maxHeight: '90%',
-
+    maxHeight: "90%",
   },
   imgcontainer: {
-    maxHeight: '50%'
+    maxHeight: "50%",
   },
   textcontainer: {
     flex: 1,
@@ -41,8 +54,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderRadius: 2,
     borderColor: "purple",
-    justifyContent: 'space-between',
-    alignItems: 'center'
+    justifyContent: "space-between",
+    alignItems: "flex-end",
   },
 });
 

@@ -1,70 +1,16 @@
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
 import { SelectCountry } from "react-native-element-dropdown";
-import { Avatar } from "react-native-paper";
-
 import { categories } from "./Categories";
 
-const local_data = [
-  {
-    value: "1",
-    lable: "Country 1",
-    image: {
-      uri: "https://www.vigcenter.com/public/all/images/default-image.jpg",
-    },
-  },
-  {
-    value: "2",
-    lable: "Country 2",
-    image: {
-      uri: "https://www.vigcenter.com/public/all/images/default-image.jpg",
-    },
-  },
-  {
-    value: "3",
-    lable: "Country 3",
-    image: {
-      uri: "https://www.vigcenter.com/public/all/images/default-image.jpg",
-    },
-  },
-  {
-    value: "4",
-    lable: "Country 4",
-    image: {
-      uri: "https://www.vigcenter.com/public/all/images/default-image.jpg",
-    },
-  },
-  {
-    value: "5",
-    lable: "Country 5",
-    image: {
-      uri: "https://www.vigcenter.com/public/all/images/default-image.jpg",
-    },
-  },
-  {
-    value: "6",
-    lable: "Country 6",
-    image: {
-      uri: "https://www.vigcenter.com/public/all/images/default-image.jpg",
-    },
-  },
-  {
-    value: "7",
-    lable: "Country 7",
-    image: {
-      uri: "https://www.vigcenter.com/public/all/images/default-image.jpg",
-    },
-  },
-];
-
 const MyDropdown = (_props) => {
-  const [country, setCountry] = useState("1");
+  const [category, setCategory] = useState({});
 
   return (
     <SelectCountry
       containerStyle={{ borderRadius: 10 }}
-          itemContainerStyle={{ paddingLeft: 40 }}
-          itemTextStyle={{alignItems: 'center'}}
+      itemContainerStyle={{ paddingLeft: 40 }}
+      itemTextStyle={{ alignItems: "center" }}
       activeColor="pink"
       style={styles.dropdown}
       selectedTextStyle={styles.selectedTextStyle}
@@ -72,15 +18,17 @@ const MyDropdown = (_props) => {
       imageStyle={styles.imageStyle}
       iconStyle={styles.iconStyle}
       maxHeight={500}
-      value={country}
+      // value={category}
       data={categories}
-      valueField="_id"
+      valueField="name"
       labelField="name"
       imageField="image"
-      //   placeholder="Select country"
-      searchPlaceholder="Search..."
+      onFocus={() => console.log('selecting...')}
+      onBlur={() => console.log('the current category is : ', category)}
       onChange={(e) => {
-        setCountry(e.value);
+        console.log("selected", e);
+        setCategory(e);
+        return
       }}
     />
   );
@@ -93,7 +41,7 @@ const styles = StyleSheet.create({
     margin: 16,
     height: 50,
     minWidth: "70%",
-    backgroundColor: "#EEEEEE",
+    backgroundColor: "#ffeaf6",
     borderRadius: 10,
     paddingHorizontal: 8,
   },

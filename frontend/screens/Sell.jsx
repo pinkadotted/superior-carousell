@@ -17,6 +17,7 @@ import { Avatar } from "react-native-paper";
 import MyTextInput from "../components/MyTextInput";
 import MyRadioButton from "../components/MyRadioButton";
 import MyDropdown from "../components/MyDropdown";
+import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
 
 const Sell = () => {
   return (
@@ -33,7 +34,7 @@ const Sell = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-
+              paddingTop: 20,
               minHeight: "20%",
               maxHeight: "20%",
               // borderWidth: 2,
@@ -56,22 +57,8 @@ const Sell = () => {
                 // borderColor: "blue",
               }}
             >
-              <View>
-                <AddImageCard />
-              </View>
-              <View>
-                <AddImageCard />
-              </View>
-              <View>
-                <TouchableOpacity>
-                  <Avatar.Icon
-                    icon="camera-plus-outline"
-                    size={50}
-                    style={{ backgroundColor: "transparent" }}
-                    color="pink"
-                  />
-                </TouchableOpacity>
-              </View>
+              {/* Horizontal scrollview for image uploading */}
+              <HorizontalImagesScroll />
             </View>
           </View>
 
@@ -86,10 +73,8 @@ const Sell = () => {
               // borderColor: 'magenta'
             }}
           >
-            <Text style={{ fontSize: 40, fontWeight: "bold" }}>Category</Text>
+            <Text style={{ fontSize: 25, fontWeight: "bold" }}>Category</Text>
             <MyDropdown />
-
-
           </View>
 
           {/* Title section */}
@@ -126,7 +111,7 @@ const Sell = () => {
                 // borderColor: 'purple'
               }}
             >
-              <MyTextInput placeholder={"Enter item's name"} />
+              <MyTextInput cursorColor="teal" />
             </View>
           </View>
 
@@ -149,7 +134,7 @@ const Sell = () => {
                 fontWeight: "bold",
                 alignSelf: "flex-start",
                 paddingHorizontal: 20,
-                paddingBottom: 40,
+                // paddingBottom: 40,
               }}
             >
               Description
@@ -160,14 +145,12 @@ const Sell = () => {
                 flexDirection: "column",
                 maxWidth: "90%",
                 minWidth: "90%",
+                minHeight: '10%',
                 // borderWidth: 2,
                 // borderColor: 'purple',
               }}
             >
-              <MyTextInput
-                placeholder={"Enter item's description"}
-                multiline={true}
-              />
+              <MyTextInput multiline={true} />
             </View>
           </View>
 
@@ -181,7 +164,7 @@ const Sell = () => {
               maxWidth: "100%",
               minWidth: "100%",
               paddingBottom: 20,
-              paddingTop: 50,
+              paddingTop: 30,
               // borderWidth: 2,
               // borderColor: "cyan",
             }}
@@ -275,8 +258,8 @@ const Sell = () => {
                 minHeight: "30%",
                 maxHeight: "30%",
                 borderRadius: 10,
-                justifyContent: 'center',
-                alignItems: 'center'
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               <Text style={{ fontSize: 25, fontWeight: "bold" }}>

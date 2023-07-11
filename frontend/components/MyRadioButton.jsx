@@ -25,6 +25,7 @@ const MyRadioButton = () => {
           Cash on Delivery / Meetup
         </Text>
         <RadioButton
+          color="red"
           value="first"
           status={checked === "first" ? "checked" : "unchecked"}
           onPress={() => setChecked("first")}
@@ -46,6 +47,7 @@ const MyRadioButton = () => {
       >
         <Text style={{ fontWeight: "bold", fontSize: 17 }}>Pay online</Text>
         <RadioButton
+          color="red"
           value="second"
           status={checked === "second" ? "checked" : "unchecked"}
           onPress={() => setChecked("second")}
