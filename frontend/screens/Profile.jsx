@@ -12,8 +12,11 @@ import React from "react";
 import { Avatar } from "react-native-paper";
 import ListingsGrid from "../components/ListingsGrid";
 import MyBottomNav from '../components/navigation/MyBottomNav';
+import { useNavigation } from "@react-navigation/native";
 
 const Profile = () => {
+  const navigate = useNavigation();
+
   let profiledetails = {
     name: "John",
     balance: 20,
@@ -22,7 +25,7 @@ const Profile = () => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Settings bar */}
-      <TouchableOpacity style={styles.settingsbutton}>
+      <TouchableOpacity style={styles.settingsbutton} onPress={() => navigate.navigate('settings')}>
         <Avatar.Icon
           size={40}
           color="red"

@@ -11,6 +11,10 @@ import Profile from "./screens/Profile";
 import MainNavContainer from "./components/navigation/MainNavContainer";
 import Sell from "./screens/Sell";
 import Settings from "./screens/Settings";
+import EditProfile from "./screens/settings/EditProfile";
+import ChangePassword from "./screens/settings/ChangePassword";
+import Logout from "./screens/settings/Logout";
+import DeactivateAccount from "./screens/settings/DeactivateAccount";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +30,10 @@ const Main = () => {
           <Stack.Screen name="sell-page" component={Sell} />
           <Stack.Screen name="profile-page" component={Profile} />
           <Stack.Screen name="settings" component={Settings} />
+          <Stack.Screen name="edit-profile" component={EditProfile} />
+          <Stack.Screen name="change-password" component={ChangePassword} />
+          <Stack.Screen name="logout" component={Logout} />
+          <Stack.Screen name="deactivate-account" component={DeactivateAccount} />
           <Stack.Screen name="main-nav" component={MainNavContainer} />
         </Stack.Group>
       </Stack.Navigator>
