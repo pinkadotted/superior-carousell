@@ -38,7 +38,7 @@ const Sell = () => {
               minHeight: "20%",
               maxHeight: "20%",
               // borderWidth: 2,
-              // borderColor: "cyan",
+              // borderColor: "green",
             }}
           >
             <Text style={{ fontWeight: "bold", fontSize: 25 }}>

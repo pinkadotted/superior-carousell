@@ -9,7 +9,7 @@ const HorizontalImagesScroll = () => {
     <ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                style={{ backgroundColor: "white"}}
+                style={{ backgroundColor: "white", minHeight: '100%', maxHeight: '100%'}}
                 contentContainerStyle={{ alignItems: "center"}}
               >
                 {images.map((img) => (
