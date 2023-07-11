@@ -1,107 +1,153 @@
 import {
   View,
   Text,
-  ScrollView,
   StyleSheet,
-  SafeAreaView,
   Platform,
+  SafeAreaView,
   StatusBar,
-  Pressable,
-  TouchableOpacity,
+  ScrollView,
   Dimensions,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
-import Button from "../components/Button";
+import MyBottomNav from "../components/navigation/MyBottomNav";
+import Header from "../components/Header";
+import AddImageCard from "../components/AddImageCard";
 import { Avatar } from "react-native-paper";
-import { useNavigation } from "@react-navigation/native";
+import MyTextInput from "../components/MyTextInput";
+import MyRadioButton from "../components/MyRadioButton";
+import MyDropdown from "../components/MyDropdown";
 import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
+import Button from "../components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 const ProductDetails = () => {
   const navigate = useNavigation();
 
   return (
-    <SafeAreaView style={styles.safeareacontainer}>
-      {/* Top Buttons */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigate.goBack()}>
-          <Avatar.Icon
-            size={50}
-            color="red"
-            icon="keyboard-backspace"
-            style={{ backgroundColor: "transparent", alignItems: "center" }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Avatar.Icon
-            size={50}
-            color="red"
-            icon="share-variant-outline"
-            style={{ backgroundColor: "transparent", alignItems: "center" }}
-          />
-        </TouchableOpacity>
-      </View>
-      <ScrollView
-        // style={styles.verticalscrollviewcontainer}
-        // contentContainerStyle={{
-        //   justifyContent: "flex-start",
-        //   alignItems: "center",
-        //   flex: 1,
-        // }}
-      >
-        {/* Images section */}
-        <View style={styles.imagescontainer}>
-          <HorizontalImagesScroll />
+    <>
+      {/* Header section */}
+      <SafeAreaView style={styles.container}>
+        {/* Top Buttons */}
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => navigate.goBack()}>
+            <Avatar.Icon
+              size={50}
+              color="red"
+              icon="keyboard-backspace"
+              style={{ backgroundColor: "transparent", alignItems: "center" }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Avatar.Icon
+              size={50}
+              color="red"
+              icon="share-variant-outline"
+              style={{ backgroundColor: "transparent", alignItems: "center" }}
+            />
+          </TouchableOpacity>
         </View>
 
-        {/* Product Details section */}
-        <View style={styles.productdetails}>
-          <Text style={styles.titletext}>Limited Edition SUTD T-shirt</Text>
-          <Text style={styles.pricetext}>S$10</Text>
-          <Text style={styles.detailsheading}>Details</Text>
-          <Text style={styles.brandheading}>Brand</Text>
-          <Text style={styles.brandtext}>Nike</Text>
-          <Text style={styles.brandheading}>Size</Text>
-          <Text style={styles.brandtext}>Large</Text>
-          <Text style={styles.detailsheading}>Condition</Text>
-          <Text style={styles.brandtext}>Like New</Text>
-          <Text style={styles.brandtext}>Like New</Text>
-          <Text style={styles.brandtext}>Like New</Text>
-          <Text style={styles.brandtext}>Like New</Text>
-        </View>
-      </ScrollView>
+        <ScrollView>
+          {/* Photos section */}
+          <View
+            style={{
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: "40%",
+              maxHeight: "40%",
+              // borderWidth: 2,
+              // borderColor: "green",
+            }}
+          >
+            <View
+              style={{
+                flex: 1,
+                // flexDirection: "row",
+                // justifyContent: "space-around",
+                justifyContent: "center",
+                alignItems: "center",
+                // minHeight: '50%',
+                // maxHeight: '50%',
+                minWidth: "100%",
+                maxWidth: "100%",
+                // borderWidth: 2,
+                // borderColor: "blue",
+              }}
+            >
+              {/* Horizontal scrollview for image uploading */}
+              <HorizontalImagesScroll />
+            </View>
+          </View>
 
-      {/* Bottom Buttons */}
-      <View style={styles.footer}>
-        <View
-          style={{
-            // borderWidth: 2,
-            // borderColor: "red",
-            minWidth: "40%",
-            maxWidth: "40%",
-            maxHeight: "80%",
-            minHeight: "80%",
-          }}
-        >
-          <Button text="Chat" bgColor="white" textColor="black" />
+          {/* Title section */}
+
+          {/* Title section */}
+          <View style={styles.productdetails}>
+            <Text style={styles.titletext}>Limited Edition SUTD T-shirt</Text>
+            <Text style={styles.pricetext}>S$10</Text>
+            <Text style={styles.detailsheading}>Details</Text>
+            <Text style={styles.brandheading}>Brand</Text>
+            <Text style={styles.brandtext}>Nike</Text>
+            <Text style={styles.brandheading}>Size</Text>
+            <Text style={styles.brandtext}>Large</Text>
+            <Text style={styles.detailsheading}>Condition</Text>
+            <Text style={styles.brandtext}>Like New</Text>
+            <Text style={styles.detailsheading}>Description</Text>
+            <Text style={styles.brandtext}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+              maiores quas quisquam molestiae, officia ipsum exercitationem
+              debitis optio! Sequi, accusamus.
+            </Text>
+          </View>
+        </ScrollView>
+
+        {/* Bottom Buttons */}
+        <View style={styles.footer}>
+          <View
+            style={{
+              // borderWidth: 2,
+              // borderColor: "red",
+              minWidth: "40%",
+              maxWidth: "40%",
+              maxHeight: "80%",
+              minHeight: "80%",
+            }}
+          >
+            <Button text="Chat" bgColor="pink" textColor="black" />
+          </View>
+          <View
+            style={{
+              // borderWidth: 2,
+              // borderColor: "red",
+              minWidth: "40%",
+              maxWidth: "40%",
+              maxHeight: "80%",
+              minHeight: "80%",
+            }}
+          >
+            <Button text="Buy" bgColor="red" textColor="white" />
+          </View>
         </View>
-        <View
-          style={{
-            // borderWidth: 2,
-            // borderColor: "red",
-            minWidth: "40%",
-            maxWidth: "40%",
-            maxHeight: "80%",
-            minHeight: "80%",
-          }}
-        >
-          <Button text="Buy" bgColor="red" textColor="white" />
-        </View>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
+  productdetails: {
+    flex: 1,
+    flexDirection: "column",
+    // borderWidth: 5,
+    // borderColor: "green",
+    minWidth: "100%",
+    maxWidth: "100%",
+    // minHeight: Dimensions.get('screen').height,
+    // maxHeight: "90%",
+    paddingHorizontal: "3%",
+  },
   safeareacontainer: {
     flex: 1,
     flexDirection: "column",
@@ -109,16 +155,7 @@ const styles = StyleSheet.create({
     minHeight: Dimensions.get("window").height,
     // borderWidth: 2,
     // borderColor: "magenta",
-  },
-  verticalscrollviewcontainer: {
-    flex: 1,
-    flexDirection: "column",
-    borderWidth: 4,
-    borderColor: "cyan",
-    // backgroundColor: "pink",
-
-    // maxHeight: "83%",
-    // minHeight: "83%",
+    backgroundColor: "transparent",
   },
   header: {
     flex: 1,
@@ -127,6 +164,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     minHeight: "7%",
     maxHeight: "7%",
+    minWidth: "100%",
+    maxWidth: "100%",
     paddingHorizontal: "5%",
     backgroundColor: "transparent",
     // borderWidth: 2,
@@ -137,34 +176,38 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     minHeight: "10%",
     maxHeight: "10%",
+    minWidth: "100%",
+    maxWidth: "100%",
     justifyContent: "space-around",
     alignItems: "center",
     paddingBottom: "2%",
     // borderWidth: 2,
     // borderColor: "cyan",
   },
-  imagescontainer: {
+  container: {
     flex: 1,
-    // flexDirection: "column",
-    justifyContent: "center",
+    backgroundColor: "transparent",
     alignItems: "center",
-    minWidth: "100%",
-    maxWidth: "100%",
-    borderWidth: 5,
-    borderColor: "purple",
-    minHeight: "50%",
-    maxHeight: "50%",
+    justifyContent: "space-between",
+    // borderWidth: 4,
+    // borderColor: "green",
+    marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    minHeight: Dimensions.get("window").height,
   },
-  productdetails: {
+  headertext: {
+    fontSize: 40,
+    fontWeight: "bold",
+  },
+  categoriescontainer: {
+    // borderWidth: 2,
+    // borderColor: "green",
+    minHeight: "40%",
+    minWidth: "90%",
+  },
+  flexcontainer: {
     flex: 1,
-    flexDirection: "column",
-    borderWidth: 5,
-    borderColor: "green",
-    minWidth: "100%",
-    maxWidth: "100%",
-    // minHeight: Dimensions.get('screen').height,
-    // maxHeight: "90%",
-    paddingHorizontal: "3%",
+    alignItems: "center",
+    justifyContent: "center",
   },
   titletext: {
     fontSize: 25,
