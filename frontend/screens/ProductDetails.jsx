@@ -56,15 +56,15 @@ const ProductDetails = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              minHeight: "40%",
-              maxHeight: "40%",
+              minHeight: "20%",
+              maxHeight: 200,
               // borderWidth: 2,
               // borderColor: "green",
             }}
           >
             <View
               style={{
-                flex: 1,
+                flex: 1,    
                 // flexDirection: "row",
                 // justifyContent: "space-around",
                 justifyContent: "center",
@@ -144,6 +144,8 @@ const styles = StyleSheet.create({
     // borderColor: "green",
     minWidth: "100%",
     maxWidth: "100%",
+    minHeight: "100%",
+    maxHeight: "100%",
     // minHeight: Dimensions.get('screen').height,
     // maxHeight: "90%",
     paddingHorizontal: "3%",
