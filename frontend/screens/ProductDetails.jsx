@@ -144,8 +144,8 @@ const styles = StyleSheet.create({
     // borderColor: "green",
     minWidth: "100%",
     maxWidth: "100%",
-    // minHeight: Dimensions.get('screen').height,
-    // maxHeight: "90%",
+    minHeight: Dimensions.get('screen').height,
+    maxHeight: "50%",
     paddingHorizontal: "3%",
   },
   safeareacontainer: {

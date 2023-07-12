@@ -1,26 +1,32 @@
 import { useNavigation } from "@react-navigation/native";
 import * as React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Dimensions } from "react-native";
 import { Avatar, Button, Card, Text } from "react-native-paper";
 
+import { listingCard } from "../styles/styles";
+
+
+const { height, width } = Dimensions.get("window");
 const LeftContent = (props) => <Avatar.Icon {...props} icon="folder" />;
 
 const ListingCard = ({ id, name, price, category, img }) => {
 
+
+  // console.log(height, width)
+
   const navigate = useNavigation();
 
   return (
-    <Card style={styles.cardcontainer} onPress={() => navigate.navigate('product-details')}>
-      <Card.Cover source={{ uri: img  }} style={styles.imgcontainer} />
-      <Card.Content style={styles.textcontainer}>
+    <Card style={listingCard.cardcontainer} onPress={() => navigate.navigate('product-details')}>
+      <Card.Cover source={{ uri: img  }} style={listingCard.imgcontainer} />
+      {/* <Card.Content style={styles.contentcontainer}>
         <Text
           variant="titleLarge"
           style={{
             justifyContent: "center",
             paddingTop: "10%",
             fontSize: 20,
-            borderColor: "purple",
-            borderRadius: 2,
+
           }}
         >
           {name}
@@ -29,33 +35,28 @@ const ListingCard = ({ id, name, price, category, img }) => {
           <Text style={{ fontSize: 30 }}>{price}</Text>
           <Avatar.Icon icon="tshirt-crew" size={40} />
         </View>
-      </Card.Content>
+      </Card.Content> */}
     </Card>
   );
 };
 
 const styles = StyleSheet.create({
-  cardcontainer: {
-    minWidth: "60%",
-    maxHeight: "90%",
-  },
   imgcontainer: {
-    maxHeight: "50%",
+    minHeight: 0.15 * height,
+    maxHeight: 0.15 * height,
   },
-  textcontainer: {
+  contentcontainer: {
     flex: 1,
-    flexDirection: "column",
-    borderRadius: 2,
-    borderColor: "purple",
+    borderWidth: 2,
+    alignItems: 'stretch'
+
   },
-  name: {},
   bottomcontainer: {
     flex: 1,
     flexDirection: "row",
-    borderRadius: 2,
-    borderColor: "purple",
     justifyContent: "space-between",
     alignItems: "flex-end",
+    borderWidth: 2
   },
 });
 
