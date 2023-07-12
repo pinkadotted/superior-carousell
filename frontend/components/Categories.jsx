@@ -1,17 +1,13 @@
 import React from "react";
-import { Avatar, Button } from "react-native-paper";
 import {
   View,
   Text,
-  StyleSheet,
-  Platform,
-  SafeAreaView,
-  StatusBar,
   ScrollView,
   TouchableOpacity,
 } from "react-native";
 import MyIcon from "./utils/MyIcon";
 import { colors } from "../styles/palette";
+import { defaultStyles } from "../styles/styles";
 
 export const categories = [
   {
@@ -66,84 +62,28 @@ export const categories = [
 
 const Categories = () => {
   return (
-    <View style={styles.flexcontainer}>
-      {/* <View style={{ ...styles.flexcontainer, maxHeight: '30%' }}> */}
-      {/* <Text
-          style={{
-            fontSize: 30,
-            fontWeight: "bold",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Categories
-        </Text> */}
-      {/* </View> */}
-
+    <View style={defaultStyles.container}>
       {/* Actual items */}
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={{ backgroundColor: colors.isabelline, borderColor: colors.springgreen}}
+        style={{
+          backgroundColor: colors.isabelline,
+        }}
         contentContainerStyle={{ alignItems: "center" }}
       >
-        {/* <View style={styles.categoriescontainer}> */}
         {categories.map((item) => (
-          <TouchableOpacity style={styles.categorybutton} key={item._id}>
-            <MyIcon size={100} icon={item.iconName} bgColor="lightgrey"/>
+          <TouchableOpacity
+            style={{ margin: 5, alignItems: "center" }}
+            key={item._id}
+          >
+            <MyIcon size={100} icon={item.iconName} bgColor="lightgrey" />
             <Text>{item.name}</Text>
           </TouchableOpacity>
         ))}
-        {/* </View> */}
       </ScrollView>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "space-between",
-    borderWidth: 2,
-    borderColor: "blue",
-    marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-  headertext: {
-    fontSize: 40,
-    fontWeight: "bold",
-  },
-  categoriescontainer: {
-    flexDirection: "row",
-    borderWidth: 5,
-    borderColor: "blue",
-    minHeight: "10%",
-    maxHeight: "20%",
-    minWidth: "100%",
-    maxWidth: "100%",
-  },
-  flexcontainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    // borderWidth: 2,
-    // borderColor: "green",
-    maxWidth: "100%",
-    minWidth: "100%",
-    // maxHeight: '100%',
-    // minHeight: '100%',
-  },
-  categorybutton: {
-    borderRadius: 20,
-    margin: 5,
-    // borderWidth: 2,
-    // borderColor: "blue",
-    // maxHeight: "15%",
-    // minHeight: '15%',
-    // justifyContent: 'center',
-    alignItems: "center",
-  },
-});
 
 export default Categories;

@@ -3,6 +3,8 @@ import { colors } from "./palette";
 
 const { height, width } = Dimensions.get("window");
 
+
+
 export const defaultStyles = StyleSheet.create({
   // CONTAINERS
   safecontainer: {
