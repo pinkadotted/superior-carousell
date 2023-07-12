@@ -3,6 +3,8 @@ import React from 'react'
 import { Avatar } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import SimpleHeader from '../components/SimpleHeader';
+import MyIcon from '../components/utils/MyIcon';
+import { defaultStyles, settingsStyles } from '../styles/styles';
 
 const Settings = () => {
   const navigate = useNavigation();
@@ -35,18 +37,16 @@ const Settings = () => {
   ];
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={defaultStyles.safecontainer}>
       {/* Header */}
       <SimpleHeader title="Settings"/>
         {/* Editables ScrollView*/}
         <ScrollView style={styles.scrollview}>
           {settings.map((item) => (
-            <TouchableOpacity style={styles.settingsbuttons} key={item._id} onPress={() => navigate.navigate(item.route)}>
-              <Avatar.Icon 
+            <TouchableOpacity style={settingsStyles.settingsbuttons} key={item._id} onPress={() => navigate.navigate(item.route)}>
+              <MyIcon 
                 icon={item.iconName} 
-                style={styles.settingsicons} 
-                size={50} 
-                color="red"/>
+                size={50} />
               <Text style={styles.buttontext}>{item.text}</Text>
             </TouchableOpacity>
           ))}
@@ -56,16 +56,6 @@ const Settings = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-    // borderWidth: 2,
-    // borderColor: "red",
-    justifyContent: "flex-start",
-    marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
   scrollview: {
     flex: 1,
     // borderWidth: 2,
@@ -75,34 +65,7 @@ const styles = StyleSheet.create({
     minHeight: "90%",
     maxHeight: "90%",
   },
-  settingsbuttons: {
-    flex: 1,
-    flexDirection: "row",
-    // borderWidth: 2,
-    // borderColor: "yellow",
-    justifyContent: "center",
-    alignItems: "center",
-    minHeight: 60,
-    maxHeight: 60,
-    minWidth: "100%",
-    maxWidth: "100%",
-    borderWidth: 1,
-    borderColor: "transparent",
-    borderBottomColor: "lightgrey",
-  },
-  settingsicons: {
-    flex: 1,
-    flexDirection: "row",
-    // borderWidth: 2,
-    // borderColor: "purple",
-    justifyContent: "center",
-    alignItems: "center",
-    minHeight: 60,
-    maxHeight: 60,
-    minWidth: 60,
-    maxWidth: 60,
-    backgroundColor: "transparent", 
-  },
+
   buttontext: {
     flex: 1,
     textAlign: "left",

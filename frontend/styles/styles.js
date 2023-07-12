@@ -203,3 +203,19 @@ export const profileStyles = StyleSheet.create({
     minWidth: '100%'
   },
 });
+
+export const settingsStyles = StyleSheet.create({
+  settingsbuttons: {
+    flex: 1,
+    flexDirection: "row",
+    // borderWidth: 2,
+    // borderColor: "yellow",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: 60,
+    maxHeight: 60,
+    minWidth: "100%",
+    maxWidth: "100%",
+    borderBottomColor: "lightgrey",
+  },
+})
