@@ -4,6 +4,7 @@ import { colors } from "./palette";
 const { height, width } = Dimensions.get("window");
 
 export const defaultStyles = StyleSheet.create({
+  // CONTAINERS
   safecontainer: {
     flex: 1,
     backgroundColor: colors.isabelline,
@@ -48,9 +49,7 @@ export const defaultStyles = StyleSheet.create({
     fontSize: 17,
   },
 
-  button: {
-    backgroundColor: colors.springgreen,
-  },
+  // ICON
   icon: {
     backgroundColor: "transparent",
     alignItems: "center",
@@ -67,6 +66,8 @@ export const simpleComponents = StyleSheet.create({
     maxWidth: "85%",
     backgroundColor: colors.bittersweet,
   },
+
+  // BOTTOM NAV
   bottomnav: {
     flex: 1,
     flexDirection: "row",
