@@ -20,6 +20,7 @@ import MyDropdown from "../components/MyDropdown";
 import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
 import Button from "../components/Button";
 import { useNavigation } from "@react-navigation/native";
+import { colors } from "../styles/palette";
 
 const ProductDetails = () => {
   const navigate = useNavigation();
@@ -108,27 +109,23 @@ const ProductDetails = () => {
         <View style={styles.footer}>
           <View
             style={{
-              // borderWidth: 2,
-              // borderColor: "red",
               minWidth: "40%",
               maxWidth: "40%",
               maxHeight: "80%",
               minHeight: "80%",
             }}
           >
-            <Button text="Chat" bgColor="pink" textColor="black" />
+            <Button text="Chat" />
           </View>
           <View
             style={{
-              // borderWidth: 2,
-              // borderColor: "red",
               minWidth: "40%",
               maxWidth: "40%",
               maxHeight: "80%",
               minHeight: "80%",
             }}
           >
-            <Button text="Buy" bgColor="red" textColor="white" />
+            <Button text="Buy" bgColor={colors.caribbeancurrent} />
           </View>
         </View>
       </SafeAreaView>
@@ -144,7 +141,7 @@ const styles = StyleSheet.create({
     // borderColor: "green",
     minWidth: "100%",
     maxWidth: "100%",
-    minHeight: Dimensions.get('screen').height,
+    minHeight: Dimensions.get("screen").height,
     maxHeight: "50%",
     paddingHorizontal: "3%",
   },

@@ -31,6 +31,23 @@ export const defaultStyles = StyleSheet.create({
     minHeight: "10%",
     maxHeight: "10%",
   },
+
+  // RADIOBUTTONS
+  radiooptioncontainer: {
+    flex: 1,
+    flexDirection: "row",
+    minHeight: "30%",
+    maxHeight: "30%",
+    minWidth: "80%",
+    maxWidth: "80%",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  radiotext: {
+    fontWeight: "bold",
+    fontSize: 17,
+  },
+
   button: {
     backgroundColor: colors.springgreen,
   },
@@ -61,6 +78,12 @@ export const simpleComponents = StyleSheet.create({
     alignItems: "center",
     position: "relative",
     backgroundColor: colors.isabelline,
+  },
+  button: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
   },
 });
 
