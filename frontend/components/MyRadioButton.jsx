@@ -1,53 +1,30 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { RadioButton } from "react-native-paper";
+import { colors } from "../styles/palette";
+import { defaultStyles } from "../styles/styles";
 
 const MyRadioButton = () => {
   const [checked, setChecked] = React.useState("first");
 
+  const firstOption = "Cash on Delivery / Meetup";
+  const secondOption = "Pay online";
+
   return (
     <>
-      <View
-        style={{
-          flex: 1,
-          flexDirection: "row",
-          //   borderWidth: 3,
-          //   borderColor: "magenta",
-          minHeight: "30%",
-          maxHeight: "30%",
-          minWidth: "80%",
-          maxWidth: "80%",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ fontWeight: "bold", fontSize: 17 }}>
-          Cash on Delivery / Meetup
-        </Text>
+      <View style={defaultStyles.radiooptioncontainer}>
+        <Text style={defaultStyles.radiotext}>{firstOption}</Text>
         <RadioButton
-          color="red"
+          color={colors.bittersweet}
           value="first"
           status={checked === "first" ? "checked" : "unchecked"}
           onPress={() => setChecked("first")}
         />
       </View>
-      <View
-        style={{
-          flex: 1,
-          flexDirection: "row",
-          //   borderWidth: 6,
-          //   borderColor: "cyan",
-          minHeight: "30%",
-          maxHeight: "30%",
-          minWidth: "80%",
-          maxWidth: "80%",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ fontWeight: "bold", fontSize: 17 }}>Pay online</Text>
+      <View style={defaultStyles.radiooptioncontainer}>
+        <Text style={defaultStyles.radiotext}>{secondOption}</Text>
         <RadioButton
-          color="red"
+          color={colors.bittersweet}
           value="second"
           status={checked === "second" ? "checked" : "unchecked"}
           onPress={() => setChecked("second")}
