@@ -6,15 +6,16 @@ import { colors } from "../../styles/palette";
 
 const MyIcon = ({
   icon = "tshirt-crew",
-  size = 40,
-  color = colors.bittersweet,
+  size = 70,
+  color = colors.caribbeancurrent,
+  bgColor = "transparent"
 }) => {
   return (
     <Avatar.Icon
       icon={icon}
       size={size}
       color={color}
-      style={defaultStyles.icon}
+      style={{...defaultStyles.icon, backgroundColor: bgColor, }}
     />
   );
 };

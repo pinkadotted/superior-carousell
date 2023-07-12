@@ -1,13 +1,11 @@
 import * as React from "react";
-import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
-import Home from "../../screens/Home";
-import Sell from "../../screens/Sell";
-import Profile from "../../screens/Profile";
 import { View, Text, TouchableOpacity } from "react-native";
-import { Avatar } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
+import MyIcon from "../utils/MyIcon";
+import { colors } from "../../styles/palette";
+import { simpleComponents } from "../../styles/styles";
 
-function MyBottomNav({activeRoute = "home-page"}) {
+function MyBottomNav({ activeRoute = "home-page" }) {
   const navigate = useNavigation();
 
   const navigationHandler = (key) => {
@@ -27,43 +25,24 @@ function MyBottomNav({activeRoute = "home-page"}) {
     }
   };
   return (
-    <View
-      style={{
-        flex: 1,
-        flexDirection: "row",
-        minWidth: "100%",
-        maxWidth: "100%",
-        // borderWidth: 2,
-        // borderColor: "cyan",
-              borderTopColor: 'grey',
-        borderTopWidth: 2,
-        justifyContent: "space-around",
-        alignItems: "center",
-        position: "relative",
-      }}
-    >
+    <View style={simpleComponents.bottomnav}>
       <TouchableOpacity onPress={() => navigationHandler(0)}>
-        <Avatar.Icon
+        <MyIcon
           icon={activeRoute === "home-page" ? "shopping" : "shopping-outline"}
-          style={{ backgroundColor: "transparent", alignItems: "center" }}
-          size={70}
-          color="red"
         />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigationHandler(1)}>
-        <Avatar.Icon
+        <MyIcon
           icon={activeRoute === "sell-page" ? "plus-box" : "plus-box-outline"}
-          style={{ backgroundColor: "transparent", alignItems: "center" }}
-          size={70}
-          color="red"
         />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigationHandler(2)}>
-        <Avatar.Icon
-          icon={activeRoute === "profile-page" ? "account-circle" : "account-circle-outline"}
-          style={{ backgroundColor: "transparent", alignItems: "center" }}
-          size={70}
-          color="red"
+        <MyIcon
+          icon={
+            activeRoute === "profile-page"
+              ? "account-circle"
+              : "account-circle-outline"
+          }
         />
       </TouchableOpacity>
     </View>

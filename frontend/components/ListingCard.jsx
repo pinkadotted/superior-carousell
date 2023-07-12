@@ -3,7 +3,7 @@ import * as React from "react";
 import { View, StyleSheet, Dimensions } from "react-native";
 import { Avatar, Button, Card, Text } from "react-native-paper";
 
-import { listingCard } from "../styles/styles";
+import { defaultStyles, listingCard } from "../styles/styles";
 import { colors } from "../styles/palette";
 import MyIcon from "./utils/MyIcon";
 
@@ -28,8 +28,14 @@ const ListingCard = ({ id, name, price, category, img }) => {
           {name}
         </Text>
         <View style={listingCard.bottomcontainer}>
-          <Text style={{ fontSize: 30, color:colors.caribbeancurrent }}>${price}</Text>
-          <MyIcon />
+          <Text style={{ fontSize: 30, color: colors.caribbeancurrent }}>
+            ${price}
+          </Text>
+
+          {/* Only this icon needs special styling for alignItems and justifyContent*/}
+          <MyIcon
+            size={70}
+          />
         </View>
       </Card.Content>
     </Card>

@@ -12,21 +12,15 @@ const Header = () => {
 
   return (
     <Appbar.Header style={styles.container} statusBarHeight={0}>
-      {/* <Appbar.BackAction onPress={_goBack} /> */}
-          <Appbar.Action icon="menu" onPress={_handleSearch} size={30} />
       <MySearchBar />
       <Appbar.Action icon="chat-outline" onPress={_handleSearch} size={30}/>
-      {/* <Appbar.Action icon="dots-vertical" onPress={_handleMore} /> */}
     </Appbar.Header>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    maxWidth: "100%",
-    minWidth: "100%",
-    // borderWidth: 2,
-    // borderColor: "cyan",
+    backgroundColor: 'transparent'
   },
 });
 
