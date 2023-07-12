@@ -57,15 +57,15 @@ const ProductDetails = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              minHeight: "40%",
-              maxHeight: "40%",
+              minHeight: "20%",
+              maxHeight: 200,
               // borderWidth: 2,
               // borderColor: "green",
             }}
           >
             <View
               style={{
-                flex: 1,
+                flex: 1,    
                 // flexDirection: "row",
                 // justifyContent: "space-around",
                 justifyContent: "center",

@@ -25,10 +25,10 @@ const Sell = () => {
   return (
     <>
       {/* Header section */}
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={defaultStyles.safecontainer}>
         {/* Back button */}
 
-        <ScrollView>
+        <ScrollView style={{flex:1, minHeight:"90%", maxHeight:"90%"}}>
           {/* Photos section */}
           <View
             style={{
@@ -257,12 +257,7 @@ const Sell = () => {
         </ScrollView>
 
         <View
-          style={{
-            alignItems: "flex-end",
-            minHeight: "10%",
-            maxHeight: "10%",
-            position: "relative",
-          }}
+          style={defaultStyles.bottomnavcontainer}
         >
           <MyBottomNav activeRoute="sell-page" />
         </View>
