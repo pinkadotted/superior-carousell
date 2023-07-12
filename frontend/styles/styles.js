@@ -41,10 +41,24 @@ export const listingCard = StyleSheet.create({
     minWidth: "60%",
     minHeight: 0.3 * height,
     maxHeight: 0.3 * height,
-    borderWidth: 2,
-    },
-    imgcontainer: {
-        minHeight: 0.15 * height,
-        maxHeight: 0.15 * height,
-      },
+    // borderWidth: 2,
+  },
+  imgcontainer: {
+    minHeight: 0.15 * height,
+    maxHeight: 0.15 * height,
+  },
+  contentcontainer: {
+    flex: 1,
+    // borderWidth: 2,
+    alignItems: "stretch",
+    minHeight: 0.15 * height,
+    maxHeight: 0.15 * height,
+  },
+  bottomcontainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-end",
+    // borderWidth: 2,
+  },
 });

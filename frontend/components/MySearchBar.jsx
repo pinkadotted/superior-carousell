@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Searchbar } from 'react-native-paper';
-import { components } from '../styles/styles';
+import { simpleComponents } from '../styles/styles';
 
 const MySearchBar = ({ placeholder }) => {
   const [searchQuery, setSearchQuery] = React.useState('');
@@ -13,7 +13,7 @@ const MySearchBar = ({ placeholder }) => {
       onChangeText={onChangeSearch}
       value={searchQuery}
       mode='bar'
-      style={components.searchbar}
+      style={simpleComponents.searchbar}
     />
   );
 };
