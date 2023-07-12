@@ -18,6 +18,8 @@ import MyTextInput from "../components/MyTextInput";
 import MyRadioButton from "../components/MyRadioButton";
 import MyDropdown from "../components/MyDropdown";
 import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
+import Button from "../components/Button";
+import { defaultStyles } from "../styles/styles";
 
 const Sell = () => {
   return (
@@ -145,7 +147,7 @@ const Sell = () => {
                 flexDirection: "column",
                 maxWidth: "90%",
                 minWidth: "90%",
-                minHeight: '10%',
+                minHeight: "10%",
                 // borderWidth: 2,
                 // borderColor: 'purple',
               }}
@@ -224,16 +226,7 @@ const Sell = () => {
               </Text>
             </View>
 
-            <View
-              style={{
-                // borderWidth: 2,
-                // borderColor: "green",
-                flex: 1,
-                justifyContent: "center",
-                alignItems: "center",
-                maxHeight: "70%",
-              }}
-            >
+            <View style={{ ...defaultStyles.container, maxHeight: "70%" }}>
               <MyRadioButton />
             </View>
           </View>
@@ -250,22 +243,16 @@ const Sell = () => {
               alignItems: "center",
             }}
           >
-            <TouchableOpacity
+            <View
               style={{
-                backgroundColor: "pink",
-                minWidth: "90%",
-                maxWidth: "90%",
-                minHeight: "30%",
+                minWidth: "80%",
+                maxWidth: "80%",
                 maxHeight: "30%",
-                borderRadius: 10,
-                justifyContent: "center",
-                alignItems: "center",
+                minHeight: "30%",
               }}
             >
-              <Text style={{ fontSize: 25, fontWeight: "bold" }}>
-                Submit Listing
-              </Text>
-            </TouchableOpacity>
+              <Button text={"Submit Listing"} />
+            </View>
           </View>
         </ScrollView>
 
