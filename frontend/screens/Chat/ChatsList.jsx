@@ -9,21 +9,20 @@ import {
 import React from "react";
 import { defaultStyles, fontSize } from "../../styles/styles";
 import SimpleHeader from "../../components/SimpleHeader";
-import MyIcon from "../../components/utils/MyIcon";
 import MessageCard from "./MessageCard";
 
 const messages = [
   {
     name: "Jon",
     listingName: "SUTD T-shirt",
-    lastMessage: "Sorry I don't",
+    lastMessage: "Sorry I don't really want to deal with dishonest people",
     date: "31/08/21",
     profilePhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
     listingPhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
   },
   {
     name: "smith",
-    listingName: "SUTD Hoodie",
+    listingName: "SUTD Hoodie that is reaaaaaallllly cooooll",
     lastMessage: "Sorry I don't",
     date: "31/08/21",
     profilePhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
@@ -65,14 +64,16 @@ const ChatsList = () => {
       {/* Editables ScrollView*/}
       <ScrollView style={styles.scrollview}>
         {messages.map((item) => (
-          <MessageCard
-            name={item.name}
-            listingName={item.listingName}
-            lastMessage={item.lastMessage}
-            date={item.date}
-            profilePhoto={item.profilePhoto}
-            listingPhoto={item.listingPhoto}
-          />
+          <TouchableOpacity activeOpacity={0.7}>
+            <MessageCard
+              name={item.name}
+              listingName={item.listingName}
+              lastMessage={item.lastMessage}
+              date={item.date}
+              profilePhoto={item.profilePhoto}
+              listingPhoto={item.listingPhoto}
+            />
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </SafeAreaView>
@@ -88,15 +89,6 @@ const styles = StyleSheet.create({
     minWidth: "95%",
     minHeight: "90%",
     maxHeight: "90%",
-  },
-
-  buttontext: {
-    flex: 1,
-    textAlign: "left",
-    paddingLeft: 5,
-    // borderWidth: 2,
-    // borderColor: "yellowgreen",
-    fontSize: fontSize,
   },
 });
 

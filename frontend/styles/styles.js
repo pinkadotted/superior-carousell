@@ -10,8 +10,8 @@ export const defaultStyles = StyleSheet.create({
   safecontainer: {
     flex: 1,
     backgroundColor: colors.isabelline,
-    minWidth: '100%',
-    maxWidth: '100%',
+    minWidth: "100%",
+    maxWidth: "100%",
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
@@ -55,7 +55,7 @@ export const defaultStyles = StyleSheet.create({
   },
   radiotext: {
     fontWeight: "bold",
-    fontSize: fontSize*1.1,
+    fontSize: fontSize * 1.1,
   },
 
   // ICON
@@ -203,7 +203,7 @@ export const profileStyles = StyleSheet.create({
     // borderWidth: 2,
     // borderColor: "cyan",
     fontWeight: "bold",
-    fontSize: fontSize*2,
+    fontSize: fontSize * 2,
     padding: "3%",
     maxWidth: "100%",
     justifyContent: "flex-start",
@@ -275,76 +275,116 @@ export const chatStyles = StyleSheet.create({
   },
   messagecontainer: {
     backgroundColor: colors.bittersweet,
-    maxWidth: '80%',
-    alignSelf: 'flex-end',
-    flexDirection: 'row',
+    maxWidth: "80%",
+    alignSelf: "flex-end",
+    flexDirection: "row",
     borderRadius: 15,
     paddingHorizontal: 10,
     marginHorizontal: 10,
     paddingTop: 5,
-    paddingBottom: 5
+    paddingBottom: 5,
   },
   messageview: {
     // backgroundColor: colors.springgreen,
-    backgroundColor: 'transparent',
-    maxWidth: '80%'
+    backgroundColor: "transparent",
+    maxWidth: "80%",
   },
   message: {
-    color: 'white',
-    alignSelf: 'flex-start',
-      fontSize: 15
+    color: "white",
+    alignSelf: "flex-start",
+    fontSize: 15,
   },
   timeview: {
-    backgroundColor: 'transparent',
-    justifyContent: 'flex-end',
-    paddingLeft: 10
+    backgroundColor: "transparent",
+    justifyContent: "flex-end",
+    paddingLeft: 10,
   },
   time: {
-    color: 'lightgrey',
-    alignSelf: 'flex-end',
-    fontSize: 10
-  }
+    color: "lightgrey",
+    alignSelf: "flex-end",
+    fontSize: 10,
+  },
 });
 
 export const chatsListStyles = StyleSheet.create({
   messagecardcontainer: {
     flex: 1,
-    flexDirection: 'row',
-    minHeight: height * 0.5,
-    maxHeight: height * 0.5,
-    borderWidth: 2, borderColor: 'cyan',
+    flexDirection: "row",
+    minHeight: height * 0.12,
+    maxHeight: height * 0.12,
+    borderWidth: 2,
+    borderColor: "transparent",
+    borderBottomColor: colors.springgreen,
+    marginVertical: 10
   },
   cardcontent: {
     flex: 1,
+    alignItems: "center",
     minWidth: "80%",
     maxWidth: "80%",
-    borderWidth: 2, borderColor: 'magenta',
-
+    paddingHorizontal: 10,
+    // borderWidth: 2,
+    // borderColor: "magenta",
   },
   nameanddate: {
     flex: 1,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    maxHeight: '20%',
-    minHeight: '20%',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    maxHeight: "20%",
+    minHeight: "20%",
+    maxWidth: "100%",
+    minWidth: "100%",
+    // borderWidth: 2,
+    // borderColor: "red",
   },
   listingdetails: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center'
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    maxWidth: "100%",
+    minWidth: "100%",
+    // paddingLeft: 15,
+    // borderWidth: 2,
+    // borderColor: "blue",
   },
   chatdetails: {
     flex: 1,
+    // borderWidth: 2,
+    // borderColor: "green",
+    alignItems: "center",
+    maxHeight: "100%",
+    minHeight: "100%",
+    justifyContent: "space-around",
+    alignItems: 'flex-end',
+    maxWidth: "30%",
+    minWidth: "30%",
+  },
+  listingandmessage: {
+    flex: 1
   },
   profilephoto: {
     flex: 1,
-    maxHeight: '80%',
-    minHeight: '80%',
-    maxWidth: '30%',
-    minWidth: '30%',
-    alignItems: 'center'
+    maxHeight: "100%",
+    minHeight: "100%",
+    maxWidth: "20%",
+    minWidth: "20%",
+    alignItems: "center",
+    justifyContent: "center",
+    // borderWidth: 2, borderColor: "pink",
+  },
+  listingPhoto: {
+    flex: 1,
+    maxHeight: "80%",
+    minHeight: "80%",
+    // borderWidth: 2, borderColor: "yellow",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  greytext: {
+    fontSize: fontSize,
+    color: "grey",
 
-  }
-
-})
+  },
+});
