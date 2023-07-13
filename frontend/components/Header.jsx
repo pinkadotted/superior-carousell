@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 import MySearchBar from "./MySearchBar";
 import { colors } from "../styles/palette";
 
-const Header = () => {
+const Header = ({ isIdle }) => {
   const _handleSearch = () => console.log("Searching");
 
   return (
@@ -12,7 +12,7 @@ const Header = () => {
       style={{ backgroundColor: "transparent" }}
       statusBarHeight={0}
     >
-      <MySearchBar />
+      <MySearchBar isIdle={isIdle}/>
       <Appbar.Action
         icon="chat-outline"
         color={colors.caribbeancurrent}

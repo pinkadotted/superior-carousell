@@ -16,10 +16,12 @@ import ChangePassword from "./screens/settings/ChangePassword";
 import Logout from "./screens/settings/Logout";
 import DeactivateAccount from "./screens/settings/DeactivateAccount";
 import ProductDetails from "./screens/ProductDetails";
+import SearchResults from "./screens/SearchResults";
 
 const Stack = createNativeStackNavigator();
 
 const Main = () => {
+
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false, animation: 'fade' }} >
@@ -27,7 +29,7 @@ const Main = () => {
           <Stack.Screen name="new-landing" component={NewLanding} />
           <Stack.Screen name="email-register" component={Register} />
           <Stack.Screen name="login" component={Login} />
-          <Stack.Screen name="home-page" component={Home} />
+          <Stack.Screen name="home-page" component={Home}/>
           <Stack.Screen name="sell-page" component={Sell} />
           <Stack.Screen name="profile-page" component={Profile} />
           <Stack.Screen name="settings" component={Settings} />
@@ -36,6 +38,7 @@ const Main = () => {
           <Stack.Screen name="logout" component={Logout} />
           <Stack.Screen name="deactivate-account" component={DeactivateAccount} />
           <Stack.Screen name="product-details" component={ProductDetails} />
+          {/* <Stack.Screen name="search-results" component={SearchResults}/> */}
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>

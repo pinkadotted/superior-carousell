@@ -16,13 +16,18 @@ import ListingsGrid from "../components/ListingsGrid";
 import { colors } from "../styles/palette";
 import { defaultStyles, fontSize } from "../styles/styles";
 
-const Home = ({ navigation }) => {
+const Home = () => {
+  const [idle, setIdle] = useState(true);
+  const isIdle = (idleStatus) => {
+    setIdle(idleStatus);
+  };
+
   return (
     <>
       {/* Header section */}
       <SafeAreaView style={defaultStyles.safecontainer}>
         <View style={defaultStyles.headercontainer}>
-          <Header />
+          <Header isIdle={isIdle} />
         </View>
         {/* Start of scrollview section */}
         <ScrollView
@@ -35,10 +40,10 @@ const Home = ({ navigation }) => {
           }}
         >
           {/* Header Text */}
-          <View style={defaultStyles.container}>
+          {idle && <View style={defaultStyles.container}>
             <Text
               style={{
-                fontSize: fontSize*2,
+                fontSize: fontSize * 2,
                 fontWeight: "bold",
                 paddingVertical: "2%"
               }}
@@ -47,18 +52,18 @@ const Home = ({ navigation }) => {
             </Text>
             <Text
               style={{
-                fontSize: fontSize*1.5,
+                fontSize: fontSize * 1.5,
               }}
             >
               What are you looking for today?
             </Text>
-          </View>
+          </View>}
 
           {/* Categories heading section*/}
-          <View style={defaultStyles.container}>
+          {idle && <View style={defaultStyles.container}>
             <Text
               style={{
-                fontSize: fontSize*2,
+                fontSize: fontSize * 2,
                 fontWeight: "bold",
                 paddingVertical: "2%",
                 marginTop: "2%",
@@ -66,18 +71,18 @@ const Home = ({ navigation }) => {
             >
               Categories
             </Text>
-          </View>
+          </View>}
 
           {/* Categories icons section*/}
           <Categories />
 
           {/* Listings */}
           <View>
-            <View style={{ justifyContent: "flex-start", alignItems: "center" }}>
-              <Text style={{ fontSize: fontSize*2, fontWeight: "bold", paddingVertical: "2%", marginTop:"2%"}}>
+            {idle && <View style={{ justifyContent: "flex-start", alignItems: "center" }}>
+              <Text style={{ fontSize: fontSize * 2, fontWeight: "bold", paddingVertical: "2%", marginTop: "2%" }}>
                 Recent Listings
               </Text>
-            </View>
+            </View>}
             <ListingsGrid />
           </View>
         </ScrollView>
