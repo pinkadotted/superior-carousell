@@ -106,7 +106,6 @@ const Sell = () => {
             <View
               style={{
                 flex: 1,
-                flexDirection: "column",
                 maxWidth: "90%",
                 minWidth: "90%",
                 // borderWidth: 2,

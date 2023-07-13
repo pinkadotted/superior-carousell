@@ -3,17 +3,21 @@ import { colors } from "./palette";
 
 const { height, width } = Dimensions.get("window");
 
-export const fontSize = width * 0.04
+export const fontSize = width * 0.04;
 
 export const defaultStyles = StyleSheet.create({
   // CONTAINERS
   safecontainer: {
     flex: 1,
     backgroundColor: colors.isabelline,
+    minWidth: '100%',
+    maxWidth: '100%',
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    minHeight: Dimensions.get("window").height,
+    // minHeight: Dimensions.get("window").height,
+    // borderWidth: 5,
+    // borderColor: 'magenta'
   },
   container: {
     flex: 1,
@@ -33,6 +37,9 @@ export const defaultStyles = StyleSheet.create({
     flex: 1,
     minHeight: "10%",
     maxHeight: "10%",
+    maxWidth: "100%",
+    minWidth: "100%",
+    // borderWidth: 2
   },
 
   // RADIOBUTTONS
@@ -108,17 +115,17 @@ export const listingCard = StyleSheet.create({
     justifyContent: "space-between",
     minHeight: 0.15 * height,
     maxHeight: 0.15 * height,
-    paddingTop: "8%"
+    paddingTop: "8%",
   },
   bottomcontainer: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    minHeight: '50%',
-    maxHeight: '50%',
-    minWidth: '100%',
-    maxWidth: '100%',
+    minHeight: "50%",
+    maxHeight: "50%",
+    minWidth: "100%",
+    maxWidth: "100%",
     // borderWidth: 2, borderColor: "blue",
   },
 });
@@ -135,7 +142,7 @@ export const profileStyles = StyleSheet.create({
     maxHeight: "8%",
     width: "95%",
   },
-  profiledetailscontainer:{
+  profiledetailscontainer: {
     // borderWidth: 2,
     // borderColor: "teal",
     minHeight: "20%",
@@ -152,6 +159,7 @@ export const profileStyles = StyleSheet.create({
     alignItems: "center",
     maxHeight: 100,
     maxWidth: "100%",
+    // maxWidth: "40%",
   },
   profiletextcontainer: {
     flex: 1,
@@ -202,11 +210,11 @@ export const profileStyles = StyleSheet.create({
     color: colors.licorice,
   },
   scrollview: {
-    flex: 1,
+    // flex: 1,
     // borderWidth: 2,
-    // borderColor: "blue",
+    borderColor: "blue",
     maxWidth: "100%",
-    minWidth: '100%'
+    minWidth: "100%",
   },
 });
 
@@ -225,4 +233,75 @@ export const settingsStyles = StyleSheet.create({
 
     borderBottomColor: colors.springgreen,
   },
-})
+});
+
+export const chatStyles = StyleSheet.create({
+  scrollview: {
+    flex: 1,
+    // borderWidth: 2,
+    // borderColor: "magenta",
+    maxWidth: "100%",
+    minWidth: "100%",
+    maxHeight: height * 0.8,
+    // minHeight: '80%',
+  },
+  profilecontainer: {
+    flex: 1,
+    flexDirection: "row",
+    // borderWidth: 2,
+    // borderColor: "green",
+    // minHeight: "20%",
+    // maxHeight: "20%",
+    minWidth: "100%",
+    maxWidth: "100%",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+  profilephotocontainer: {
+    flex: 1,
+    // borderWidth: 2,
+    // borderColor: "grey",
+    alignItems: "center",
+    minWidth: "35%",
+    maxWidth: "35%",
+  },
+  chatFooter: {
+    flex: 1,
+  },
+  container: {
+    paddingVertical: 10,
+    marginVertical: 5,
+    // borderWidth: 2
+  },
+  messagecontainer: {
+    backgroundColor: colors.bittersweet,
+    maxWidth: '80%',
+    alignSelf: 'flex-end',
+    flexDirection: 'row',
+    borderRadius: 15,
+    paddingHorizontal: 10,
+    marginHorizontal: 10,
+    paddingTop: 5,
+    paddingBottom: 5
+  },
+  messageview: {
+    // backgroundColor: colors.springgreen,
+    backgroundColor: 'transparent',
+    maxWidth: '80%'
+  },
+  message: {
+    color: 'white',
+    alignSelf: 'flex-start',
+      fontSize: 15
+  },
+  timeview: {
+    backgroundColor: 'transparent',
+    justifyContent: 'flex-end',
+    paddingLeft: 10
+  },
+  time: {
+    color: 'lightgrey',
+    alignSelf: 'flex-end',
+    fontSize: 10
+  }
+});

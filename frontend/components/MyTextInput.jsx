@@ -1,6 +1,7 @@
 import * as React from "react";
 import { TextInput } from "react-native-paper";
 import { View } from "react-native";
+import { colors } from "../styles/palette";
 
 const MyTextInput = ({
   placeholder,
@@ -10,23 +11,24 @@ const MyTextInput = ({
   const [text, setText] = React.useState("");
 
   return (
-    // <View style={{ height: 50, justifyContent: "center" }}>
+
     <TextInput
       multiline={multiline}
       value={text}
       onChangeText={(text) => setText(text)}
-      label={placeholder}
+      placeholder={placeholder}
       numberOfLines={multiline ? 4 : 1}
-      textColor="red"
+      textColor={colors.caribbeancurrent}
       style={{
         borderRadius: 4,
         flex: 1,
-        // height: multiline ? 120 : 50,
-        maxHeight: 120,
-        minWidth: "90%",
-        backgroundColor: "#ffeaf6",
-        borderWidth: 0,
-        lineHeight: 30,
+        maxHeight: '100%',
+        minHeight: '100%',
+        minWidth: "100%",
+        maxWidth: "100%",
+        justifyContent: 'center',
+        // backgroundColor: colors.springgreen,
+        // lineHeight: 10,
         // borderWidth: 2,
         // borderColor: 'green',
       }}
@@ -35,10 +37,9 @@ const MyTextInput = ({
       mode="flat"
       underlineColor="transparent"
       activeUnderlineColor="transparent"
-      textAlign={"center"}
-      cursorColor="red"
+      cursorColor={colors.caribbeancurrent}
     />
-    // </View>
+
   );
 };
 

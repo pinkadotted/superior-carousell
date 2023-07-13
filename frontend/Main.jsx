@@ -16,6 +16,7 @@ import ChangePassword from "./screens/settings/ChangePassword";
 import Logout from "./screens/settings/Logout";
 import DeactivateAccount from "./screens/settings/DeactivateAccount";
 import ProductDetails from "./screens/ProductDetails";
+import Chat from "./screens/Chat/Chat";
 import SearchResults from "./screens/SearchResults";
 
 const Stack = createNativeStackNavigator();
@@ -38,6 +39,7 @@ const Main = () => {
           <Stack.Screen name="logout" component={Logout} />
           <Stack.Screen name="deactivate-account" component={DeactivateAccount} />
           <Stack.Screen name="product-details" component={ProductDetails} />
+          <Stack.Screen name="chat" component={Chat} />
           {/* <Stack.Screen name="search-results" component={SearchResults}/> */}
         </Stack.Group>
       </Stack.Navigator>

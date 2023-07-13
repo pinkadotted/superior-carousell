@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from "react-native";
 import React from "react";
 import { Avatar } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    minHeight: "10%",
-    maxHeight: "10%",
+    minHeight: Dimensions.get("window").height * 0.1,
+    maxHeight: Dimensions.get("window").height * 0.1,
     minWidth: "95%",
     maxWidth: "95%",
     // borderWidth: 2,
