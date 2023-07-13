@@ -389,8 +389,6 @@ export const chatsListStyles = StyleSheet.create({
   },
 });
 
-});
-
 export const testStyles = StyleSheet.create({
   messagecardcontainer: {
     flex: 1,
