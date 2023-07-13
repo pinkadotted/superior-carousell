@@ -17,14 +17,18 @@ const ListingCard = ({ id, name, price, category, img }) => {
     >
       <Card.Cover source={{ uri: img }} style={listingCard.imgcontainer} />
       <Card.Content style={listingCard.contentcontainer}>
-        <View>
+        <View
+         style={{
+          // borderWidth: 2, borderColor: "orange",
+          flex: 1, minHeight: "60%", maxHeight: "60%",}}
+         >
           <Text
             variant="titleLarge"
             style={{
               justifyContent: "center",
-              paddingTop: "5%",
               fontSize: fontSize,
-              lineHeight: 20
+              lineHeight: fontSize*1.2,
+              // borderWidth: 2, borderColor: "yellowgreen",
             }}
             numberOfLines={2}
             
@@ -34,12 +38,12 @@ const ListingCard = ({ id, name, price, category, img }) => {
         </View>
 
         <View style={listingCard.bottomcontainer}>
-          <Text style={{ fontSize: 30, color: colors.caribbeancurrent }}>
+          <Text style={{ fontSize: fontSize*1.7, color: colors.caribbeancurrent }}>
             ${price}
           </Text>
 
           {/* Only this icon needs special styling for alignItems and justifyContent*/}
-          <MyIcon size={70} />
+          <MyIcon size={fontSize * 4} />
         </View>
       </Card.Content>
     </Card>

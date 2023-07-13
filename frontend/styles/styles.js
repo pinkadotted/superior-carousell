@@ -103,24 +103,23 @@ export const listingCard = StyleSheet.create({
   },
   contentcontainer: {
     flex: 1,
-    // borderWidth: 2,
-    // borderColor: 'magenta',
+    // borderWidth: 2, borderColor: 'magenta',
     alignItems: "flex-start",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     minHeight: 0.15 * height,
     maxHeight: 0.15 * height,
+    paddingTop: "8%"
   },
   bottomcontainer: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    minHeight: '40%',
-    maxHeight: '40%',
+    minHeight: '50%',
+    maxHeight: '50%',
     minWidth: '100%',
     maxWidth: '100%',
-    // borderWidth: 2,
-    // borderColor: "blue",
+    // borderWidth: 2, borderColor: "blue",
   },
 });
 
