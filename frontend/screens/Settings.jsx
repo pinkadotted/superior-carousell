@@ -4,7 +4,7 @@ import { Avatar } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import SimpleHeader from '../components/SimpleHeader';
 import MyIcon from '../components/utils/MyIcon';
-import { defaultStyles, settingsStyles } from '../styles/styles';
+import { defaultStyles, fontSize, settingsStyles } from '../styles/styles';
 
 const Settings = () => {
   const navigate = useNavigation();
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     // borderWidth: 2,
     // borderColor: "yellowgreen",
-    fontSize: 15,
+    fontSize: fontSize,
   },
 });
 

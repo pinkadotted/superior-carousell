@@ -3,13 +3,14 @@ import React from "react";
 import { Avatar } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import MyIcon from "./utils/MyIcon";
+import { fontSize } from "../styles/styles";
 
 const SimpleHeader = (props) => {
   const navigate = useNavigation();
   return (
     <View style={styles.header}>
       <TouchableOpacity
-        // style={styles.backbutton}
+        style={styles.backbutton}
         onPress={() => navigate.goBack()}
       >
         <MyIcon size={50} icon="keyboard-backspace" />
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     // borderWidth: 2,
     // borderColor: "cyan",
     fontWeight: "bold",
-    fontSize: 20,
+    fontSize: fontSize*1.5,
   },
   backbutton: {
     flex: 1,

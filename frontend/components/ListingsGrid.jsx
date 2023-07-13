@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import { SimpleGrid } from "react-native-super-grid";
 import ListingCard from "./ListingCard";
+import { fontSize } from "../styles/styles";
 
 const listings = [
   {
@@ -45,11 +46,6 @@ const ListingsGrid = () => {
   return (
     // <View>
     <ScrollView showsVerticalScrollIndicator={false}>
-      <View style={{ justifyContent: "flex-start", alignItems: "center" }}>
-        <Text style={{ fontSize: 30, fontWeight: "bold", paddingTop: 20 }}>
-          Recent Listings
-        </Text>
-      </View>
       <SimpleGrid
         itemDimension={130}
         data={listings}

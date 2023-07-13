@@ -21,6 +21,7 @@ import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
 import Button from "../components/Button";
 import { useNavigation } from "@react-navigation/native";
 import { colors } from "../styles/palette";
+import { fontSize } from "../styles/styles";
 
 const ProductDetails = () => {
   const navigate = useNavigation();
@@ -191,10 +192,10 @@ const styles = StyleSheet.create({
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     minHeight: Dimensions.get("window").height,
   },
-  headertext: {
-    fontSize: 40,
-    fontWeight: "bold",
-  },
+  // headertext: {
+  //   fontSize: 40,
+  //   fontWeight: "bold",
+  // },
   categoriescontainer: {
     // borderWidth: 2,
     // borderColor: "green",
@@ -207,24 +208,24 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   titletext: {
-    fontSize: 25,
+    fontSize: fontSize*1.7,
   },
   pricetext: {
-    fontSize: 25,
+    fontSize: fontSize*1.7,
     fontWeight: "bold",
   },
   detailsheading: {
-    fontSize: 25,
+    fontSize: fontSize*1.7,
     fontWeight: "bold",
     paddingTop: "5%",
   },
   brandheading: {
-    fontSize: 15,
+    fontSize: fontSize*1.1,
     paddingTop: "5%",
     color: "grey",
   },
   brandtext: {
-    fontSize: 20,
+    fontSize: fontSize*1.3,
     color: "black",
   },
 });

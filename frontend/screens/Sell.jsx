@@ -19,7 +19,7 @@ import MyRadioButton from "../components/MyRadioButton";
 import MyDropdown from "../components/MyDropdown";
 import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
 import Button from "../components/Button";
-import { defaultStyles } from "../styles/styles";
+import { defaultStyles, fontSize } from "../styles/styles";
 
 const Sell = () => {
   return (
@@ -36,14 +36,14 @@ const Sell = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              paddingTop: 20,
+              paddingTop: "3%",
               minHeight: "20%",
               maxHeight: "20%",
               // borderWidth: 2,
               // borderColor: "green",
             }}
           >
-            <Text style={{ fontWeight: "bold", fontSize: 25 }}>
+            <Text style={{ fontWeight: "bold", fontSize: fontSize*1.7, paddingVertical:"2%" }}>
               Choose 1 or more photos
             </Text>
             <View
@@ -75,7 +75,7 @@ const Sell = () => {
               // borderColor: 'magenta'
             }}
           >
-            <Text style={{ fontSize: 25, fontWeight: "bold" }}>Category</Text>
+            <Text style={{ fontSize: fontSize*1.7, fontWeight: "bold" }}>Category</Text>
             <MyDropdown />
           </View>
 
@@ -95,7 +95,7 @@ const Sell = () => {
           >
             <Text
               style={{
-                fontSize: 20,
+                fontSize: fontSize*1.3,
                 fontWeight: "bold",
                 alignSelf: "flex-start",
                 paddingHorizontal: 20,
@@ -132,7 +132,7 @@ const Sell = () => {
           >
             <Text
               style={{
-                fontSize: 20,
+                fontSize: fontSize*1.3,
                 fontWeight: "bold",
                 alignSelf: "flex-start",
                 paddingHorizontal: 20,
@@ -173,7 +173,7 @@ const Sell = () => {
           >
             <Text
               style={{
-                fontSize: 20,
+                fontSize: fontSize*1.3,
                 fontWeight: "bold",
                 alignSelf: "flex-start",
                 paddingHorizontal: 20,
@@ -213,7 +213,7 @@ const Sell = () => {
             <View>
               <Text
                 style={{
-                  fontSize: 20,
+                  fontSize: fontSize*1.3,
                   fontWeight: "bold",
                   alignItems: "center",
                   justifyContent: "flex-start",
@@ -277,10 +277,10 @@ const styles = StyleSheet.create({
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     minHeight: Dimensions.get("window").height,
   },
-  headertext: {
-    fontSize: 40,
-    fontWeight: "bold",
-  },
+  // headertext: {
+  //   fontSize: 40,
+  //   fontWeight: "bold",
+  // },
   categoriescontainer: {
     // borderWidth: 2,
     // borderColor: "green",

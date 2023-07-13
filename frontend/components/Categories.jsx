@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import MyIcon from "./utils/MyIcon";
 import { colors } from "../styles/palette";
-import { defaultStyles } from "../styles/styles";
+import { defaultStyles, fontSize } from "../styles/styles";
 
 export const categories = [
   {
@@ -78,7 +78,7 @@ const Categories = () => {
             key={item._id}
           >
             <MyIcon size={100} icon={item.iconName} bgColor="lightgrey" />
-            <Text>{item.name}</Text>
+            <Text style={{fontSize: fontSize}}>{item.name}</Text>
           </TouchableOpacity>
         ))}
       </ScrollView>

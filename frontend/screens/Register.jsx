@@ -13,6 +13,7 @@ import MySearchBar from "../components/MySearchBar";
 import MyTextInput from "../components/MyTextInput";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { useNavigation } from "@react-navigation/native";
+import { fontSize } from "../styles/styles";
 
 
 const Register = () => {
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
   },
   headertext: {
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: fontSize*2,
   },
   createaccount: {
     minWidth: "90%",
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
   },
   createaccounttext: {
     color: "white",
-    fontSize: 20,
+    fontSize: fontSize*1.3,
     fontWeight: "bold",
   },
   horizontalcontainer: {

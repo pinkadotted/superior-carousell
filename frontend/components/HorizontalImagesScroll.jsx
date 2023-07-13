@@ -18,7 +18,7 @@ const HorizontalImagesScroll = () => {
       contentContainerStyle={{ alignItems: "center" }}
     >
       {images.map((img) => (
-        <View key={img} style={{ maxWidth: "40%", paddingHorizontal: 15 }}>
+        <View key={img} style={{ maxWidth: "40%", paddingHorizontal: "1%" }}>
           <AddImageCard />
         </View>
       ))}

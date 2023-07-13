@@ -12,6 +12,7 @@ import {
   import MyTextInput from "../components/MyTextInput";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { useNavigation } from "@react-navigation/native";
+import { fontSize } from "../styles/styles";
 
   
 const Login = () => {
@@ -71,7 +72,7 @@ const Login = () => {
     },
     headertext: {
       fontWeight: "bold",
-      fontSize: 30,
+      fontSize: fontSize*2,
     },
     createaccount: {
       minWidth: "100%",
@@ -87,7 +88,7 @@ const Login = () => {
     },
     createaccounttext: {
       color: "white",
-      fontSize: 20,
+      fontSize: fontSize*1.3,
       fontWeight: "bold",
     },
     horizontalcontainer: {

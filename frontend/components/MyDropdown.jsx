@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet } from "react-native";
 import { SelectCountry } from "react-native-element-dropdown";
 import { categories } from "./Categories";
+import { fontSize } from "../styles/styles";
 
 const MyDropdown = (_props) => {
   const [category, setCategory] = useState({});
@@ -52,10 +53,10 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   placeholderStyle: {
-    fontSize: 16,
+    fontSize: fontSize,
   },
   selectedTextStyle: {
-    fontSize: 18,
+    fontSize: fontSize*1.1,
     marginLeft: 20,
     fontWeight: "bold",
   },

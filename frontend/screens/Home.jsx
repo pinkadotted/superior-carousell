@@ -14,7 +14,7 @@ import Header from "../components/Header";
 import Categories from "../components/Categories";
 import ListingsGrid from "../components/ListingsGrid";
 import { colors } from "../styles/palette";
-import { defaultStyles } from "../styles/styles";
+import { defaultStyles, fontSize } from "../styles/styles";
 
 const Home = ({ navigation }) => {
   return (
@@ -38,15 +38,16 @@ const Home = ({ navigation }) => {
           <View style={defaultStyles.container}>
             <Text
               style={{
-                fontSize: 40,
+                fontSize: fontSize*2,
                 fontWeight: "bold",
+                paddingVertical: "2%"
               }}
             >
               Welcome John!
             </Text>
             <Text
               style={{
-                fontSize: 30,
+                fontSize: fontSize*1.5,
               }}
             >
               What are you looking for today?
@@ -57,8 +58,10 @@ const Home = ({ navigation }) => {
           <View style={defaultStyles.container}>
             <Text
               style={{
-                fontSize: 30,
+                fontSize: fontSize*2,
                 fontWeight: "bold",
+                paddingVertical: "2%",
+                marginTop: "2%",
               }}
             >
               Categories
@@ -70,6 +73,11 @@ const Home = ({ navigation }) => {
 
           {/* Listings */}
           <View>
+            <View style={{ justifyContent: "flex-start", alignItems: "center" }}>
+              <Text style={{ fontSize: fontSize*2, fontWeight: "bold", paddingVertical: "2%", marginTop:"2%"}}>
+                Recent Listings
+              </Text>
+            </View>
             <ListingsGrid />
           </View>
         </ScrollView>

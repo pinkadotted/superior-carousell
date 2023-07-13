@@ -48,7 +48,7 @@ export const defaultStyles = StyleSheet.create({
   },
   radiotext: {
     fontWeight: "bold",
-    fontSize: 17,
+    fontSize: fontSize*1.1,
   },
 
   // ICON
@@ -180,7 +180,7 @@ export const profileStyles = StyleSheet.create({
     // borderWidth: 2,
     // borderColor: "green",
     maxWidth: "100%",
-    fontSize: 15,
+    fontSize: fontSize,
     color: colors.licorice,
   },
   yourlistings: {
@@ -195,7 +195,7 @@ export const profileStyles = StyleSheet.create({
     // borderWidth: 2,
     // borderColor: "cyan",
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: fontSize*2,
     padding: "3%",
     maxWidth: "100%",
     justifyContent: "flex-start",
