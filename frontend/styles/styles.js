@@ -305,3 +305,46 @@ export const chatStyles = StyleSheet.create({
     fontSize: 10
   }
 });
+
+export const chatsListStyles = StyleSheet.create({
+  messagecardcontainer: {
+    flex: 1,
+    flexDirection: 'row',
+    minHeight: height * 0.5,
+    maxHeight: height * 0.5,
+    borderWidth: 2, borderColor: 'cyan',
+  },
+  cardcontent: {
+    flex: 1,
+    minWidth: "80%",
+    maxWidth: "80%",
+    borderWidth: 2, borderColor: 'magenta',
+
+  },
+  nameanddate: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    maxHeight: '20%',
+    minHeight: '20%',
+  },
+  listingdetails: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center'
+  },
+  chatdetails: {
+    flex: 1,
+  },
+  profilephoto: {
+    flex: 1,
+    maxHeight: '80%',
+    minHeight: '80%',
+    maxWidth: '30%',
+    minWidth: '30%',
+    alignItems: 'center'
+
+  }
+
+})

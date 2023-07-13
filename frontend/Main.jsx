@@ -18,6 +18,7 @@ import DeactivateAccount from "./screens/settings/DeactivateAccount";
 import ProductDetails from "./screens/ProductDetails";
 import Chat from "./screens/Chat/Chat";
 import SearchResults from "./screens/SearchResults";
+import ChatsList from "./screens/Chat/ChatsList";
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,7 @@ const Main = () => {
           <Stack.Screen name="deactivate-account" component={DeactivateAccount} />
           <Stack.Screen name="product-details" component={ProductDetails} />
           <Stack.Screen name="chat" component={Chat} />
+          <Stack.Screen name="chats-list" component={ChatsList} />
           {/* <Stack.Screen name="search-results" component={SearchResults}/> */}
         </Stack.Group>
       </Stack.Navigator>
