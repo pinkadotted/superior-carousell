@@ -66,7 +66,7 @@ const ChatsList = () => {
       <ScrollView style={styles.scrollview}>
         {messages.map((item) => (
           <TouchableOpacity activeOpacity={0.7}>
-            <MessageCard
+            <MessageCard2
               name={item.name}
               listingName={item.listingName}
               lastMessage={item.lastMessage}
