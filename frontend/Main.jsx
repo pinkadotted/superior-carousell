@@ -36,7 +36,6 @@ const Main = () => {
           <Stack.Screen name="logout" component={Logout} />
           <Stack.Screen name="deactivate-account" component={DeactivateAccount} />
           <Stack.Screen name="product-details" component={ProductDetails} />
-          {/* <Stack.Screen name="main-nav" component={MainNavContainer} /> */}
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>

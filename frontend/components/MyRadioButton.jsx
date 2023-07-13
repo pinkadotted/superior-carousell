@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 import { RadioButton } from "react-native-paper";
 import { colors } from "../styles/palette";
 import { defaultStyles } from "../styles/styles";
