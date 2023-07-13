@@ -115,7 +115,7 @@ const ProductDetails = () => {
               minHeight: "80%",
             }}
           >
-            <Button text="Chat" />
+            <Button text="Chat" navigateTo='chat' />
           </View>
           <View
             style={{
