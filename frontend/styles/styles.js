@@ -3,7 +3,7 @@ import { colors } from "./palette";
 
 const { height, width } = Dimensions.get("window");
 
-
+export const fontSize = width * 0.04
 
 export const defaultStyles = StyleSheet.create({
   // CONTAINERS
@@ -104,7 +104,9 @@ export const listingCard = StyleSheet.create({
   contentcontainer: {
     flex: 1,
     // borderWidth: 2,
-    alignItems: "stretch",
+    // borderColor: 'magenta',
+    alignItems: "flex-start",
+    justifyContent: "space-around",
     minHeight: 0.15 * height,
     maxHeight: 0.15 * height,
   },
@@ -112,8 +114,13 @@ export const listingCard = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-end",
+    alignItems: "center",
+    minHeight: '40%',
+    maxHeight: '40%',
+    minWidth: '100%',
+    maxWidth: '100%',
     // borderWidth: 2,
+    // borderColor: "blue",
   },
 });
 
@@ -208,14 +215,15 @@ export const settingsStyles = StyleSheet.create({
   settingsbuttons: {
     flex: 1,
     flexDirection: "row",
-    // borderWidth: 2,
-    // borderColor: "yellow",
+    borderWidth: 1,
+    borderColor: "transparent",
     justifyContent: "center",
     alignItems: "center",
     minHeight: 60,
     maxHeight: 60,
     minWidth: "100%",
     maxWidth: "100%",
-    borderBottomColor: "lightgrey",
+
+    borderBottomColor: colors.springgreen,
   },
 })
