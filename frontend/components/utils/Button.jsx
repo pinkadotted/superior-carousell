@@ -6,8 +6,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import { colors } from "../styles/palette";
-import { simpleComponents } from "../styles/styles";
+import { colors } from "../../styles/palette";
+import { simpleComponents } from "../../styles/styles";
 import { useNavigation } from "@react-navigation/native";
 
 const Button = ({

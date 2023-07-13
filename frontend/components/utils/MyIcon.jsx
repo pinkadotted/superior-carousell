@@ -15,7 +15,7 @@ const MyIcon = ({
       icon={icon}
       size={size}
       color={color}
-      style={{...defaultStyles.icon, backgroundColor: bgColor, }}
+      style={{...defaultStyles.icon, backgroundColor: bgColor}}
     />
   );
 };
