@@ -11,46 +11,47 @@ import { defaultStyles, fontSize } from "../../styles/styles";
 import SimpleHeader from "../../components/SimpleHeader";
 import MyIcon from "../../components/utils/MyIcon";
 import MessageCard from "./MessageCard";
+import MessageCard2 from "./MessageCard2";
 
 const messages = [
   {
     name: "Jon",
     listingName: "SUTD T-shirt",
-    lastMessage: "Sorry I don't",
+    lastMessage: "Sorry I don't know if I can purchase at this price, are you open to nego?",
     date: "31/08/21",
-    profilePhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
+    profilePhoto: "https://image.pbs.org/video-assets/Vtw3T4t-asset-mezzanine-16x9-Bf5n3hO.png",
     listingPhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
   },
   {
-    name: "smith",
+    name: "Smith, not John Smith yuh yuh yuh",
     listingName: "SUTD Hoodie",
     lastMessage: "Sorry I don't",
     date: "31/08/21",
-    profilePhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
+    profilePhoto: "https://image.pbs.org/video-assets/Vtw3T4t-asset-mezzanine-16x9-Bf5n3hO.png",
     listingPhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
   },
   {
-    name: "Jon",
-    listingName: "SUTD T-shirt",
+    name: "Alfred",
+    listingName: "SUTD most exclusive T-shirt",
     lastMessage: "Sorry I don't",
     date: "31/08/21",
-    profilePhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
+    profilePhoto: "https://image.pbs.org/video-assets/Vtw3T4t-asset-mezzanine-16x9-Bf5n3hO.png",
     listingPhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
   },
   {
-    name: "Jon",
+    name: "Amy",
     listingName: "SUTD T-shirt",
     lastMessage: "Sorry I don't",
     date: "31/08/21",
-    profilePhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
+    profilePhoto: "https://image.pbs.org/video-assets/Vtw3T4t-asset-mezzanine-16x9-Bf5n3hO.png",
     listingPhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
   },
   {
-    name: "Jon",
+    name: "David",
     listingName: "SUTD T-shirt",
     lastMessage: "Sorry I don't",
     date: "31/08/21",
-    profilePhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
+    profilePhoto: "https://image.pbs.org/video-assets/Vtw3T4t-asset-mezzanine-16x9-Bf5n3hO.png",
     listingPhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
   },
 ];
@@ -65,7 +66,8 @@ const ChatsList = () => {
       {/* Editables ScrollView*/}
       <ScrollView style={styles.scrollview}>
         {messages.map((item) => (
-          <MessageCard
+          // <MessageCard
+          <MessageCard2
             name={item.name}
             listingName={item.listingName}
             lastMessage={item.lastMessage}
@@ -90,14 +92,14 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
   },
 
-  buttontext: {
-    flex: 1,
-    textAlign: "left",
-    paddingLeft: 5,
-    // borderWidth: 2,
-    // borderColor: "yellowgreen",
-    fontSize: fontSize,
-  },
+  // buttontext: {
+  //   flex: 1,
+  //   textAlign: "left",
+  //   paddingLeft: 5,
+  //   // borderWidth: 2,
+  //   // borderColor: "yellowgreen",
+  //   fontSize: fontSize,
+  // },
 });
 
 export default ChatsList;

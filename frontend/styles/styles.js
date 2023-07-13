@@ -1,7 +1,7 @@
 import { StyleSheet, StatusBar, Dimensions } from "react-native";
 import { colors } from "./palette";
 
-const { height, width } = Dimensions.get("window");
+export const { height, width } = Dimensions.get("window");
 
 export const fontSize = width * 0.04;
 
@@ -347,4 +347,96 @@ export const chatsListStyles = StyleSheet.create({
 
   }
 
+});
+
+export const testStyles = StyleSheet.create({
+  messagecardcontainer: {
+    flex: 1,
+    flexDirection: 'row',
+    minHeight: height * 0.15,
+    maxHeight: height * 0.15,
+    // borderWidth: 2, borderColor: 'cyan',
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+  profilephoto: {
+    flex: 1,
+    maxHeight: '100%',
+    minHeight: '100%',
+    maxWidth: '20%',
+    minWidth: '20%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    // borderWidth: 2, borderColor: 'blue',
+  },
+  cardcontent: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    maxHeight: '100%',
+    minHeight: '100%',
+    maxWidth: '80%',
+    minWidth: '80%',
+    padding: "3%"
+    // borderWidth: 2, borderColor: 'orange',
+  },
+  nameanddate: {
+    flex: 1,
+    flexDirection: "row",
+    // borderWidth: 2, borderColor: 'red',
+    minWidth: "100%",
+    maxWidth: "100%",
+    minHeight: "30%",
+    maxHeight: "30%",
+  },
+  uppergroup: {
+    flex: 1,
+    flexDirection: "row",
+    // borderWidth: 2, borderColor: "greenyellow",
+    maxWidth: "100%",
+  },
+  smalltext: {
+    flexDirection: "row",
+    maxWidth: "100%",
+    fontSize: fontSize,
+    color: "grey",
+    // borderWidth: 2, borderColor: 'purple',
+  },
+  chatdetails: {
+    flex: 1,
+    flexDirection: 'row',
+    // borderWidth: 2, borderColor: 'magenta',
+    minWidth: "100%",
+    maxWidth: "100%",
+    minHeight: "70%",
+    maxHeight: "70%",
+  },
+  listingdetails: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    // borderWidth: 2, borderColor: 'gold',
+    minHeight: "100%",
+    maxHeight: "100%",
+    minWidth: "70%",
+    maxWidth: "70%",
+  },
+  listingimage: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // borderWidth: 2, borderColor: 'teal',
+    minHeight: "100%",
+    maxHeight: "100%",
+    minWidth: "30%",
+    maxWidth: "30%",
+  },
+  imagestyle: {
+    minHeight: "100%",
+    minWidth: "100%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    resizeMode: 'center',
+    // borderWidth: 2, borderColor: 'grey',
+  },
 })
