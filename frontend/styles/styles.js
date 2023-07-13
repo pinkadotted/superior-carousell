@@ -396,6 +396,7 @@ export const testStyles = StyleSheet.create({
     minHeight: height * 0.15,
     maxHeight: height * 0.15,
     // borderWidth: 2, borderColor: 'cyan',
+    borderWidth: 1, borderColor: "transparent", borderBottomColor: colors.springgreen,
     justifyContent: "flex-start",
     alignItems: "center",
   },
