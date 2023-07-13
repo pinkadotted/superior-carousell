@@ -9,7 +9,6 @@ import {
 import React from "react";
 import { defaultStyles, fontSize } from "../../styles/styles";
 import SimpleHeader from "../../components/SimpleHeader";
-import MyIcon from "../../components/utils/MyIcon";
 import MessageCard from "./MessageCard";
 import MessageCard2 from "./MessageCard2";
 
@@ -17,7 +16,7 @@ const messages = [
   {
     name: "Jon",
     listingName: "SUTD T-shirt",
-    lastMessage: "Sorry I don't know if I can purchase at this price, are you open to nego?",
+    lastMessage: "Sorry I don't really want to deal with dishonest people",
     date: "31/08/21",
     profilePhoto: "https://image.pbs.org/video-assets/Vtw3T4t-asset-mezzanine-16x9-Bf5n3hO.png",
     listingPhoto: "https://cdn-icons-png.flaticon.com/512/3421/3421758.png",
@@ -66,15 +65,16 @@ const ChatsList = () => {
       {/* Editables ScrollView*/}
       <ScrollView style={styles.scrollview}>
         {messages.map((item) => (
-          // <MessageCard
-          <MessageCard2
-            name={item.name}
-            listingName={item.listingName}
-            lastMessage={item.lastMessage}
-            date={item.date}
-            profilePhoto={item.profilePhoto}
-            listingPhoto={item.listingPhoto}
-          />
+          <TouchableOpacity activeOpacity={0.7}>
+            <MessageCard
+              name={item.name}
+              listingName={item.listingName}
+              lastMessage={item.lastMessage}
+              date={item.date}
+              profilePhoto={item.profilePhoto}
+              listingPhoto={item.listingPhoto}
+            />
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </SafeAreaView>
@@ -91,15 +91,6 @@ const styles = StyleSheet.create({
     minHeight: "90%",
     maxHeight: "90%",
   },
-
-  // buttontext: {
-  //   flex: 1,
-  //   textAlign: "left",
-  //   paddingLeft: 5,
-  //   // borderWidth: 2,
-  //   // borderColor: "yellowgreen",
-  //   fontSize: fontSize,
-  // },
 });
 
 export default ChatsList;

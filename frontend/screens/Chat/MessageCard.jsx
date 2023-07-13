@@ -1,6 +1,6 @@
 import { Avatar, Button, Card, Text } from "react-native-paper";
 import React from "react";
-import { chatsListStyles } from "../../styles/styles";
+import { chatsListStyles, fontSize } from "../../styles/styles";
 import { View } from "react-native";
 
 const MessageCard = ({
@@ -11,26 +11,42 @@ const MessageCard = ({
   profilePhoto,
   listingPhoto,
 }) => {
-  console.log("profilephoto: ", listingPhoto);
   return (
-    <Card style={chatsListStyles.messagecardcontainer}>
-          <Avatar.Image source={{ uri: profilePhoto }} style={ chatsListStyles.profilephoto} />
-      <Card.Content style={chatsListStyles.cardcontent}>
+    <View style={chatsListStyles.messagecardcontainer}>
+      <View style={chatsListStyles.profilephoto}>
+        <Avatar.Image source={{ uri: profilePhoto }} />
+      </View>
+      <View style={chatsListStyles.cardcontent}>
         <View style={chatsListStyles.nameanddate}>
-          <Text variant="bodyMedium">{name}</Text>
-          <Text variant="bodyMedium">{date}</Text>
+          <Text  style={chatsListStyles.greytext}>
+            {name}
+          </Text>
+          <Text style={chatsListStyles.greytext}>
+            {date}
+          </Text>
         </View>
         <View style={chatsListStyles.listingdetails}>
-          <View style={chatsListStyles.chatdetails}>
-            <Text variant="bodyMedium">{listingName}</Text>
-            <Text variant="bodyMedium">{lastMessage}</Text>
+          <View style={chatsListStyles.listingandmessage}>
+            <Text
+              variant="bodyMedium"
+              style={{ fontWeight: "bold", fontSize: fontSize * 1.2}}
+              numberOfLines={1}
+            >
+              {listingName}
+            </Text>
+            <Text style={chatsListStyles.greytext} numberOfLines={1}>
+              {lastMessage}
+            </Text>
           </View>
           <View style={chatsListStyles.chatdetails}>
-            <Card.Cover source={{ uri: listingPhoto }} />
+            <Avatar.Image
+              // source={{ uri: listingPhoto }}
+              style={{ ...chatsListStyles.listingPhoto, borderRadius: 10 }}
+            />
           </View>
         </View>
-      </Card.Content>
-    </Card>
+      </View>
+    </View>
   );
 };
 

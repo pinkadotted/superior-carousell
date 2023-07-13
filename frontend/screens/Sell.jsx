@@ -18,7 +18,7 @@ import MyTextInput from "../components/MyTextInput";
 import MyRadioButton from "../components/MyRadioButton";
 import MyDropdown from "../components/MyDropdown";
 import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
-import Button from "../components/Button";
+import Button from "../components/utils/Button";
 import { defaultStyles, fontSize } from "../styles/styles";
 
 const Sell = () => {

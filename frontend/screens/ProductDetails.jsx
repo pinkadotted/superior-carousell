@@ -18,7 +18,7 @@ import MyTextInput from "../components/MyTextInput";
 import MyRadioButton from "../components/MyRadioButton";
 import MyDropdown from "../components/MyDropdown";
 import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
-import Button from "../components/Button";
+import Button from "../components/utils/Button";
 import { useNavigation } from "@react-navigation/native";
 import { colors } from "../styles/palette";
 import { fontSize } from "../styles/styles";
@@ -126,7 +126,7 @@ const ProductDetails = () => {
               minHeight: "80%",
             }}
           >
-            <Button text="Buy" bgColor={colors.caribbeancurrent} />
+            <Button text="Buy" bgColor={colors.caribbeancurrent} navigateTo="buy"/>
           </View>
         </View>
       </SafeAreaView>
