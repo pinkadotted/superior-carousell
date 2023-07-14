@@ -9,7 +9,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import MyBottomNav from "../components/navigation/MyBottomNav";
 import Header from "../components/Header";
 import AddImageCard from "../components/AddImageCard";
@@ -21,14 +21,48 @@ import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
 import Button from "../components/utils/Button";
 import { defaultStyles, fontSize } from "../styles/styles";
 
+const listings = [{}];
+
 const Sell = () => {
+  const [listingTitle, setListingTitle] = useState("");
+  const [listingDescription, setListingDescription] = useState("");
+  const [listingPrice, setListingPrice] = useState("");
+  const [dealMethod, setDealMethod] = useState("Cash on Delivery / Meetup");
+
+  const sendTitleToParent = (input) => setListingTitle(input);
+  console.log("listingTitle is: ", listingTitle);
+
+  const sendDescToParent = (input) => setListingDescription(input);
+  console.log("listingDescription is: ", listingDescription);
+
+  const sendPriceToParent = (input) => setListingPrice(input);
+  console.log("listingPrice is: ", listingPrice);
+
+  const sendDealMethodToParent = (input) => setDealMethod(input);
+  console.log("dealMethod is: ", dealMethod);
+
+  // const submitListingHandler = () => {
+  //   // replace following lines w code to send the object to db later on
+  //   const newListing = {
+  //     listingTitle: listingTitle,
+  //     listingDescription: listingDescription,
+  //     listingPrice: listingPrice,
+  //     dealMethod: dealMethod,
+  //   };
+  //   listings.push(newListing);
+  //   console.log("listings: ", listings);
+  // };
+
   return (
     <>
       {/* Header section */}
       <SafeAreaView style={defaultStyles.safecontainer}>
         {/* Back button */}
 
-        <ScrollView style={{flex:1, minHeight:"90%", maxHeight:"90%"}}>
+        <ScrollView style={{
+          flex: 1,
+          // minHeight: "90%", maxHeight: "90%"
+        }}>
           {/* Photos section */}
           <View
             style={{
@@ -43,7 +77,13 @@ const Sell = () => {
               // borderColor: "green",
             }}
           >
-            <Text style={{ fontWeight: "bold", fontSize: fontSize*1.7, paddingVertical:"2%" }}>
+            <Text
+              style={{
+                fontWeight: "bold",
+                fontSize: fontSize * 1.7,
+                paddingVertical: "2%",
+              }}
+            >
               Choose 1 or more photos
             </Text>
             <View
@@ -75,7 +115,9 @@ const Sell = () => {
               // borderColor: 'magenta'
             }}
           >
-            <Text style={{ fontSize: fontSize*1.7, fontWeight: "bold" }}>Category</Text>
+            <Text style={{ fontSize: fontSize * 1.7, fontWeight: "bold" }}>
+              Category
+            </Text>
             <MyDropdown />
           </View>
 
@@ -95,7 +137,7 @@ const Sell = () => {
           >
             <Text
               style={{
-                fontSize: fontSize*1.3,
+                fontSize: fontSize * 1.3,
                 fontWeight: "bold",
                 alignSelf: "flex-start",
                 paddingHorizontal: 20,
@@ -112,7 +154,10 @@ const Sell = () => {
                 // borderColor: 'purple'
               }}
             >
-              <MyTextInput cursorColor="teal" />
+              <MyTextInput
+                cursorColor="teal"
+                sendDataToParent={sendTitleToParent}
+              />
             </View>
           </View>
 
@@ -131,7 +176,7 @@ const Sell = () => {
           >
             <Text
               style={{
-                fontSize: fontSize*1.3,
+                fontSize: fontSize * 1.3,
                 fontWeight: "bold",
                 alignSelf: "flex-start",
                 paddingHorizontal: 20,
@@ -151,7 +196,10 @@ const Sell = () => {
                 // borderColor: 'purple',
               }}
             >
-              <MyTextInput multiline={true} />
+              <MyTextInput
+                multiline={true}
+                sendDataToParent={sendDescToParent}
+              />
             </View>
           </View>
 
@@ -172,7 +220,7 @@ const Sell = () => {
           >
             <Text
               style={{
-                fontSize: fontSize*1.3,
+                fontSize: fontSize * 1.3,
                 fontWeight: "bold",
                 alignSelf: "flex-start",
                 paddingHorizontal: 20,
@@ -190,7 +238,7 @@ const Sell = () => {
                 // borderColor: "purple",
               }}
             >
-              <MyTextInput />
+              <MyTextInput sendDataToParent={sendPriceToParent} />
             </View>
           </View>
 
@@ -212,7 +260,7 @@ const Sell = () => {
             <View>
               <Text
                 style={{
-                  fontSize: fontSize*1.3,
+                  fontSize: fontSize * 1.3,
                   fontWeight: "bold",
                   alignItems: "center",
                   justifyContent: "flex-start",
@@ -226,7 +274,7 @@ const Sell = () => {
             </View>
 
             <View style={{ ...defaultStyles.container, maxHeight: "70%" }}>
-              <MyRadioButton />
+              <MyRadioButton sendDataToParent={sendDealMethodToParent} />
             </View>
           </View>
 
@@ -250,14 +298,14 @@ const Sell = () => {
                 minHeight: "30%",
               }}
             >
-              <Button text={"Submit Listing"} />
+              <Button text={"Submit Listing"}
+                // onSubmit={submitListingHandler}
+                navigateTo={"home-page"} />
             </View>
           </View>
         </ScrollView>
 
-        <View
-          style={defaultStyles.bottomnavcontainer}
-        >
+        <View style={defaultStyles.bottomnavcontainer}>
           <MyBottomNav activeRoute="sell-page" />
         </View>
       </SafeAreaView>

@@ -22,7 +22,7 @@ const messages = [
     listingPhoto: "https://wearesutd.sutd.edu.sg/wp-content/uploads/2018/11/SUTD-Starter-Pack-Items-8377-full-res-screen-res.jpg",
   },
   {
-    name: "Smith, not John Smith yuh yuh yuh",
+    name: 'jon smithe',
     listingName: "SUTD Hoodie",
     lastMessage: "Hello, can I ask if this is legit bc I don't recall there being a hoodie like this, thanks.",
     date: "31/08/21",

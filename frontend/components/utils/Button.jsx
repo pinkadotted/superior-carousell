@@ -11,6 +11,7 @@ import { simpleComponents } from "../../styles/styles";
 import { useNavigation } from "@react-navigation/native";
 
 const Button = ({
+  // onSubmit,
   navigateTo,
   text,
   bgColor = colors.springgreen,
@@ -19,7 +20,10 @@ const Button = ({
   const navigate = useNavigation();
   return (
     <TouchableOpacity
-      onPress={() => navigate.navigate(navigateTo)}
+      onPress={() => {
+        // onSubmit()
+        navigate.navigate(navigateTo)
+      }}
       activeOpacity={0.6}
       style={{ ...simpleComponents.button, backgroundColor: bgColor }}
     >

@@ -15,7 +15,7 @@ export const defaultStyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    // minHeight: Dimensions.get("window").height,
+    minHeight: Dimensions.get("window").height,
     // borderWidth: 5,
     // borderColor: 'magenta'
   },
@@ -39,7 +39,8 @@ export const defaultStyles = StyleSheet.create({
     maxHeight: "10%",
     maxWidth: "100%",
     minWidth: "100%",
-    // borderWidth: 2
+    borderWidth: 2,
+
   },
 
   // RADIOBUTTONS
@@ -73,7 +74,7 @@ export const simpleComponents = StyleSheet.create({
     height: 50,
     minWidth: "85%",
     maxWidth: "85%",
-    backgroundColor: colors.bittersweet,
+    backgroundColor: colors.springgreen2,
   },
 
   // BOTTOM NAV
@@ -210,7 +211,7 @@ export const profileStyles = StyleSheet.create({
     color: colors.licorice,
   },
   scrollview: {
-    // flex: 1,
+    flex: 1,
     // borderWidth: 2,
     borderColor: "blue",
     maxWidth: "100%",

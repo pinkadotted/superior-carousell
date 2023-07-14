@@ -4,18 +4,21 @@ import { View } from "react-native";
 import { colors } from "../styles/palette";
 
 const MyTextInput = ({
+  sendDataToParent,
   placeholder,
   isPassword = false,
   multiline = false,
 }) => {
   const [text, setText] = React.useState("");
+  // console.log('title is: ', text)
 
   return (
 
     <TextInput
       multiline={multiline}
       value={text}
-      onChangeText={(text) => setText(text)}
+      onBlur={() => sendDataToParent(text)}
+      onChangeText={(value) => setText(value)}
       placeholder={placeholder}
       numberOfLines={multiline ? 4 : 1}
       textColor={colors.caribbeancurrent}
