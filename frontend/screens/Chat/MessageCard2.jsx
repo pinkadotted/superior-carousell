@@ -27,7 +27,7 @@ const MessageCard2 = ({
         <View style={testStyles.nameanddate}>
                       {/* Name */}
           <View style={{...testStyles.uppergroup, flex: 0, maxWidth: "70%"}}>
-            <Text style={testStyles.smalltext} numberOfLines={1}>
+            <Text style={{...testStyles.smalltext, minWidth: '90%'}} numberOfLines={1}>
               {name}
             </Text>
           </View>
@@ -42,7 +42,7 @@ const MessageCard2 = ({
         <View style={testStyles.chatdetails}>
           {/* Listing Name + Last Message */}
           <View style={testStyles.listingdetails}>
-            <Text style={{...testStyles.smalltext, color:"black", fontWeight:"bold"}} numberOfLines={1}>{listingName}</Text>
+            <Text style={{...testStyles.smalltext, color:"black", fontWeight:"bold", minWidth: '90%'}} numberOfLines={1}>{listingName}</Text>
             <Text style={testStyles.smalltext} numberOfLines={1}>{lastMessage}</Text>
           </View>
           {/* Listing Photo */}

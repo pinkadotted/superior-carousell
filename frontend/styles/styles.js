@@ -438,7 +438,7 @@ export const testStyles = StyleSheet.create({
   },
   smalltext: {
     flexDirection: "row",
-    maxWidth: "100%",
+    maxWidth: "90%",
     fontSize: fontSize,
     color: "grey",
     // borderWidth: 2, borderColor: 'purple',
@@ -480,4 +480,10 @@ export const testStyles = StyleSheet.create({
     resizeMode: 'center',
     // borderWidth: 2, borderColor: 'grey',
   },
+  datetext: {
+    flexDirection: "row",
+    maxWidth: "100%",
+    fontSize: fontSize,
+    color: "grey",
+  }
 })

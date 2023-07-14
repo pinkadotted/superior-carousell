@@ -13,19 +13,27 @@ const MessageCard = ({
 }) => {
   return (
     <View style={chatsListStyles.messagecardcontainer}>
+
       <View style={chatsListStyles.profilephoto}>
         <Avatar.Image source={{ uri: profilePhoto }} />
       </View>
+
       <View style={chatsListStyles.cardcontent}>
+
         <View style={chatsListStyles.nameanddate}>
+
           <Text  style={chatsListStyles.greytext}>
             {name}
           </Text>
+
           <Text style={chatsListStyles.greytext}>
             {date}
           </Text>
+
         </View>
+
         <View style={chatsListStyles.listingdetails}>
+
           <View style={chatsListStyles.listingandmessage}>
             <Text
               variant="bodyMedium"
@@ -38,6 +46,7 @@ const MessageCard = ({
               {lastMessage}
             </Text>
           </View>
+          
           <View style={chatsListStyles.chatdetails}>
             <Avatar.Image
               // source={{ uri: listingPhoto }}
