@@ -19,7 +19,7 @@ import MyRadioButton from "../components/MyRadioButton";
 import MyDropdown from "../components/MyDropdown";
 import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
 import Button from "../components/utils/Button";
-import { defaultStyles, fontSize } from "../styles/styles";
+import { defaultStyles, fontSize, height } from "../styles/styles";
 import { useNavigation } from "@react-navigation/native";
 import { colors } from "../styles/palette";
 
@@ -40,7 +40,7 @@ const Register = () => {
       </View>
       <ScrollView
         style={{
-          // flex: 1,
+          flex: 1,
           // borderWidth: 3,
           // borderColor: "yellow",
           maxHeight: "90%",
@@ -205,8 +205,8 @@ const Register = () => {
         {/* Submit button */}
         <View
           style={{
-            minHeight: "30%",
-            maxHeight: "30%",
+            minHeight: height * 0.3,
+            maxHeight: height * 0.3,
             // borderWidth: 4,
             // borderColor: "pink",
             flex: 1,
@@ -218,8 +218,8 @@ const Register = () => {
             style={{
               minWidth: "80%",
               maxWidth: "80%",
-              maxHeight: "40%",
-              minHeight: "40%",
+              maxHeight: "30%",
+              minHeight: "30%",
               // borderWidth: 3
             }}
           >
@@ -231,7 +231,7 @@ const Register = () => {
           </View>
           <View
             style={{
-              flex: 1,
+              // flex: 1,
               // borderWidth: 2,
               justifyContent: "center",
               alignItems: "center",
@@ -239,7 +239,7 @@ const Register = () => {
             }}
           >
             <Text style={{ color: colors.licorice, fontWeight: "bold" }}>
-              Already have an account?{" "}
+              Already have an account?
             </Text>
             <TouchableOpacity onPress={() => navigate.navigate("login")}>
               <Text

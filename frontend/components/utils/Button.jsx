@@ -27,6 +27,7 @@ const Button = ({
     <TouchableOpacity
       onPress={() => {
         onSubmit();
+        console.log('HELLO')
         navigate.navigate(navigateTo);
         return;
       }}
