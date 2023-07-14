@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 import { SelectCountry } from "react-native-element-dropdown";
 import { categories } from "./Categories";
 import { fontSize } from "../styles/styles";
+import { colors } from "../styles/palette";
 
 const MyDropdown = (_props) => {
   const [category, setCategory] = useState({});
@@ -12,7 +13,7 @@ const MyDropdown = (_props) => {
       containerStyle={{ borderRadius: 10 }}
       itemContainerStyle={{ paddingLeft: 40 }}
       itemTextStyle={{ alignItems: "center" }}
-      activeColor="pink"
+      activeColor= {colors.springgreen2}
       style={styles.dropdown}
       selectedTextStyle={styles.selectedTextStyle}
       placeholderStyle={styles.placeholderStyle}
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     margin: 16,
     height: 50,
     minWidth: "70%",
-    backgroundColor: "#ffeaf6",
+    backgroundColor: colors.springgreen2,
     borderRadius: 10,
     paddingHorizontal: 8,
   },

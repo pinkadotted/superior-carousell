@@ -15,7 +15,7 @@ const MyRadioButton = () => {
       <View style={defaultStyles.radiooptioncontainer}>
         <Text style={defaultStyles.radiotext}>{firstOption}</Text>
         <RadioButton
-          color={colors.bittersweet}
+          color={colors.springgreen}
           value="first"
           status={checked === "first" ? "checked" : "unchecked"}
           onPress={() => setChecked("first")}
@@ -24,7 +24,7 @@ const MyRadioButton = () => {
       <View style={defaultStyles.radiooptioncontainer}>
         <Text style={defaultStyles.radiotext}>{secondOption}</Text>
         <RadioButton
-          color={colors.bittersweet}
+          color={colors.springgreen}
           value="second"
           status={checked === "second" ? "checked" : "unchecked"}
           onPress={() => setChecked("second")}

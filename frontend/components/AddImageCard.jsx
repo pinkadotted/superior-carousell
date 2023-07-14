@@ -7,15 +7,14 @@ import {
 } from "react-native";
 import * as React from "react";
 import { Avatar, Card } from "react-native-paper";
+import { colors } from "../styles/palette";
+import { fontSize } from "../styles/styles";
 
 const AddImageCard = () => {
   return (
-    <Pressable
+    <TouchableOpacity
       onPress={() => console.log("Pressed!")}
-      // style={({ pressed }) => {
-      //   backgroundColor: pressed ? "green" : "cyan";
-      // }}
-      // style={{backgroundColor: 'blue'}}
+      activeOpacity={0.6}
     >
       <Card
         mode="contained"
@@ -25,18 +24,18 @@ const AddImageCard = () => {
           minHeight: "90%",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: '#ffeaf6'
+          backgroundColor: colors.springgreen3,
         }}
       >
         {/* <Card.Cover source={{ uri: "https://picsum.photos/700" }} /> */}
         <Avatar.Icon
           icon="camera-plus-outline"
           style={{ backgroundColor: "transparent" }}
-          color="red"
-          size={80}
+          color={colors.springgreen1}
+          size={fontSize * 4.5} // need to change scale factor later
         />
       </Card>
-    </Pressable>
+    </TouchableOpacity>
   );
 };
 

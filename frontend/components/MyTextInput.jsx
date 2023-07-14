@@ -27,7 +27,7 @@ const MyTextInput = ({
         minWidth: "100%",
         maxWidth: "100%",
         justifyContent: 'center',
-        // backgroundColor: colors.springgreen,
+        backgroundColor: colors.springgreen3,
         // lineHeight: 10,
         // borderWidth: 2,
         // borderColor: 'green',
