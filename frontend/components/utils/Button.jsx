@@ -11,7 +11,7 @@ import { simpleComponents } from "../../styles/styles";
 import { useNavigation } from "@react-navigation/native";
 
 const Button = ({
-  onSubmit,
+  onSubmit = () => {},
   navigateTo,
   text,
   bgColor = colors.springgreen,
