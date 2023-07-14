@@ -7,7 +7,7 @@ export const fontSize = width * 0.04;
 
 export const defaultStyles = StyleSheet.create({
   // CONTAINERS
-  safecontainer: {
+safecontainer: {
     flex: 1,
     backgroundColor: colors.isabelline,
     minWidth: "100%",
@@ -15,7 +15,6 @@ export const defaultStyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    minHeight: Dimensions.get("window").height,
     // borderWidth: 5,
     // borderColor: 'magenta'
   },
@@ -27,20 +26,19 @@ export const defaultStyles = StyleSheet.create({
   },
   headercontainer: {
     flex: 1,
-    maxHeight: "10%",
-    minHeight: "10%",
+    maxHeight: height*0.1,
+    minHeight: height*0.1,
     paddingHorizontal: 7,
     justifyContent: "center",
     alignItems: "center",
+    // borderWidth: 2, borderColor: 'blue',
   },
   bottomnavcontainer: {
     flex: 1,
-    minHeight: "10%",
-    maxHeight: "10%",
+    maxHeight: height*0.1,
+    minHeight: height*0.1,
     maxWidth: "100%",
     minWidth: "100%",
-    borderWidth: 2,
-
   },
 
   // RADIOBUTTONS

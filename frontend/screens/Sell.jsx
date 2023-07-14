@@ -8,6 +8,7 @@ import {
   ScrollView,
   Dimensions,
   TouchableOpacity,
+  Keyboard,
 } from "react-native";
 import React, { useState } from "react";
 import MyBottomNav from "../components/navigation/MyBottomNav";
@@ -24,6 +25,17 @@ import { defaultStyles, fontSize } from "../styles/styles";
 const listings = [];  
 
 const Sell = () => {
+  // Adding keyboard event listener to determine whether to show bottom nav or not
+  const [keyboardDown, setKeyboardDown] = useState(true);
+  const isKeyboardDown = (keyboardStatus) => setKeyboardDown(keyboardStatus);
+  const keyboardShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => { isKeyboardDown(false) }
+  );
+  const keyboardHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => { isKeyboardDown(true) }
+  );
   const [listingTitle, setListingTitle] = useState("");
   const [listingDescription, setListingDescription] = useState("");
   const [listingPrice, setListingPrice] = useState("");
@@ -305,9 +317,9 @@ const Sell = () => {
           </View>
         </ScrollView>
 
-        <View style={defaultStyles.bottomnavcontainer}>
+        {keyboardDown && <View style={defaultStyles.bottomnavcontainer}>
           <MyBottomNav activeRoute="sell-page" />
-        </View>
+        </View>}
       </SafeAreaView>
     </>
   );
