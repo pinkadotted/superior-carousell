@@ -11,6 +11,7 @@ import { defaultStyles, fontSize } from "../../styles/styles";
 import SimpleHeader from "../../components/SimpleHeader";
 import MessageCard from "./MessageCard";
 import MessageCard2 from "./MessageCard2";
+import { useNavigation } from "@react-navigation/native";
 
 const messages = [
   {
@@ -56,6 +57,8 @@ const messages = [
 ];
 
 const ChatsList = () => {
+  const navigate = useNavigation();
+
   return (
     <SafeAreaView style={defaultStyles.safecontainer}>
       {/* Header */}
@@ -65,7 +68,8 @@ const ChatsList = () => {
       {/* Editables ScrollView*/}
       <ScrollView style={styles.scrollview}>
         {messages.map((item) => (
-          <TouchableOpacity activeOpacity={0.7}>
+          <TouchableOpacity activeOpacity={0.7}
+          onPress={() => navigate.navigate("chat")}>
             <MessageCard2
               name={item.name}
               listingName={item.listingName}
