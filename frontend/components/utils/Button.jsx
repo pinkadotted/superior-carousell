@@ -25,7 +25,11 @@ const Button = ({
 
   return (
     <TouchableOpacity
-      onPress={onPressHandler}
+      onPress={() => {
+        onSubmit();
+        navigate.navigate(navigateTo);
+        return;
+      }}
       activeOpacity={0.6}
       style={{ ...simpleComponents.button, backgroundColor: bgColor }}
     >

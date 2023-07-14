@@ -4,10 +4,12 @@ import { View } from "react-native";
 import { colors } from "../styles/palette";
 
 const MyTextInput = ({
-  sendDataToParent,
+  sendDataToParent = () => {},
   placeholder,
   isPassword = false,
   multiline = false,
+  isEmail = false,
+  isNum = false
 }) => {
   const [text, setText] = React.useState("");
   // console.log('title is: ', text)
@@ -16,6 +18,7 @@ const MyTextInput = ({
 
     <TextInput
       multiline={multiline}
+      keyboardType={isEmail ? "email-address" : isNum ? 'decimal-pad' : 'default'}
       value={text}
       onBlur={() => sendDataToParent(text)}
       onChangeText={(value) => setText(value)}

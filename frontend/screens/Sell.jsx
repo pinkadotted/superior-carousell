@@ -238,7 +238,9 @@ const Sell = () => {
                 // borderColor: "purple",
               }}
             >
-              <MyTextInput sendDataToParent={sendPriceToParent} />
+              <MyTextInput
+                isNum={true}
+                sendDataToParent={sendPriceToParent} />
             </View>
           </View>
 

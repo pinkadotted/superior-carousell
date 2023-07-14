@@ -20,8 +20,6 @@ const MyRadioButton = ({ sendDataToParent }) => {
           onPress={() => {
             setChecked(firstOption);
             const newVal = firstOption;
-            // console.log("newVal: ", newVal);
-
             sendDataToParent(newVal);
           }}
         />
@@ -34,9 +32,7 @@ const MyRadioButton = ({ sendDataToParent }) => {
           status={checked === secondOption ? "checked" : "unchecked"}
           onPress={() => {
             setChecked(secondOption);
-            // const newVal = setChecked(secondOption);
             const newVal = secondOption;
-            // console.log("newVal: ", newVal);
             sendDataToParent(newVal);
           }}
         />

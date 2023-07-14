@@ -13,10 +13,10 @@ export const defaultStyles = StyleSheet.create({
     minWidth: "100%",
     maxWidth: "100%",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    minHeight: Dimensions.get("window").height,
-    // borderWidth: 5,
+    // minHeight: Dimensions.get("window").height,
+    // borderWidth: 3,
     // borderColor: 'magenta'
   },
   container: {
@@ -39,7 +39,7 @@ export const defaultStyles = StyleSheet.create({
     maxHeight: "10%",
     maxWidth: "100%",
     minWidth: "100%",
-    borderWidth: 2,
+    // borderWidth: 2,
 
   },
 
