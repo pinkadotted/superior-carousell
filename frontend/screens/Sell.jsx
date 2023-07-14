@@ -21,7 +21,7 @@ import HorizontalImagesScroll from "../components/HorizontalImagesScroll";
 import Button from "../components/utils/Button";
 import { defaultStyles, fontSize } from "../styles/styles";
 
-const listings = [{}];
+const listings = [];  
 
 const Sell = () => {
   const [listingTitle, setListingTitle] = useState("");
@@ -41,17 +41,17 @@ const Sell = () => {
   const sendDealMethodToParent = (input) => setDealMethod(input);
   console.log("dealMethod is: ", dealMethod);
 
-  // const submitListingHandler = () => {
-  //   // replace following lines w code to send the object to db later on
-  //   const newListing = {
-  //     listingTitle: listingTitle,
-  //     listingDescription: listingDescription,
-  //     listingPrice: listingPrice,
-  //     dealMethod: dealMethod,
-  //   };
-  //   listings.push(newListing);
-  //   console.log("listings: ", listings);
-  // };
+  const submitListingHandler = () => {
+    // replace following lines w code to send the object to db later on
+    const newListing = {
+      listingTitle: listingTitle,
+      listingDescription: listingDescription,
+      listingPrice: listingPrice,
+      dealMethod: dealMethod,
+    };
+    listings.push(newListing);
+    console.log("listings: ", listings);
+  };
 
   return (
     <>
@@ -299,7 +299,7 @@ const Sell = () => {
               }}
             >
               <Button text={"Submit Listing"}
-                // onSubmit={submitListingHandler}
+                onSubmit={submitListingHandler}
                 navigateTo={"home-page"} />
             </View>
           </View>

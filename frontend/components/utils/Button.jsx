@@ -11,19 +11,21 @@ import { simpleComponents } from "../../styles/styles";
 import { useNavigation } from "@react-navigation/native";
 
 const Button = ({
-  // onSubmit,
+  onSubmit,
   navigateTo,
   text,
   bgColor = colors.springgreen,
   textColor = "white",
 }) => {
   const navigate = useNavigation();
+  const onPressHandler = () => {
+    onSubmit();
+    navigate.navigate(navigateTo);
+  };
+
   return (
     <TouchableOpacity
-      onPress={() => {
-        // onSubmit()
-        navigate.navigate(navigateTo)
-      }}
+      onPress={onPressHandler}
       activeOpacity={0.6}
       style={{ ...simpleComponents.button, backgroundColor: bgColor }}
     >
